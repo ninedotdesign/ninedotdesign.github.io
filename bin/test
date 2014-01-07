@@ -1,4 +1,0 @@
-#!/bin/bash -x
-
-bundle exec compass compile assets
-bundle exec jekyll build && bundle exec ./bin/check_content.rb
