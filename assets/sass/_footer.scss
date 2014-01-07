@@ -1,0 +1,117 @@
+/* -------------------------
+ * Sloth - Footer
+*/
+.footer-logo a:hover, .footer-logo a:focus {
+  background-position: center top;
+}
+
+.app-footer {
+  padding: em(20px) 0;
+  background-color: $black;
+  color: $gray;
+
+  @media (min-width: em(768px,16px)) {
+    padding: em(50px) 0;
+  }
+
+  a {
+    color: $gray;
+    line-height: em(24px);
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $secondaryColor;
+    }
+  }
+
+  .footer-accent-links {
+    a {
+      color: $mainColor;
+      font-weight: bold;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $mainDarkColor;
+      }
+    }
+  }
+}
+
+.footer-section-title {
+  @include font-size(24px);
+  text-transform: uppercase;
+  color: white;
+}
+
+.app-footer-copyright {
+
+  @media (max-width: em(767px,16px)) {
+    margin: em(15px) 0;
+  }
+
+  p {
+    margin-bottom: em(14px);
+    line-height: em(16px);
+  }
+
+  .footer-contact {
+    @include font-size(18px);
+    line-height: 1em;
+    color: $mainColor;
+    font-weight: bold;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: darken($mainColor, 15);
+    }
+
+    .button-icon {
+      @include font-size(16px);
+    }
+  }
+
+  .footer-company,
+  .footer-terms {
+    @include font-size(12px);
+    line-height: em(16px,12px);
+    color: $grayDark;
+  }
+
+  .footer-company {
+    margin: em(8px,12px) 0 em(6px,12px);
+  }
+
+  .footer-terms {
+    a {
+      margin-right: .5em;
+      color: $grayDark;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $gray;
+      }
+    }
+  }
+}
+
+.footer-social-icons {
+  margin-top: em(10px);
+  
+  a {
+    display: inline-block;
+    margin-right: em(3px,32px);
+    @include font-size(32px);
+    line-height: 1em;
+    color: $mainDarkColor;
+
+    &:hover,
+    &:focus {
+      color: $mainColor;
+      text-decoration: none;
+    }    
+  }
+}

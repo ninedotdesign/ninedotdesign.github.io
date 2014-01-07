@@ -1,0 +1,126 @@
+---
+layout: default
+section: dev
+active: api
+---
+
+<article class="page-apidoc">
+  <div class="row">
+    <div class="apidoc-column-sidebar four columns">
+
+      <aside class="apidoc-sidebar">
+        <h2 class="apidoc-sidebar-title">API Docs</h2>
+
+        <!-- Level 1 nav -->
+        <ul class="apidoc-sidebar-level-1">
+        {% for level1 in site.dev_api_navigation %}
+          <li class="apidoc-sidebar-section">
+            {% assign alt_url = level1.url | remove: '/'  %}
+            {% if page.url == level1.url or page.url == alt_url %}
+              {% assign link_active = true %}
+            {% else %}
+              {% assign link_active = false %}
+            {% endif %}
+
+            {% if level1.url %}<a class="apidoc-sidebar-link {% if link_active %}active{% endif %}" href="{{ level1.url }}">{{ level1.label }}</a>{% else %} {{ level1.label }} {% endif %}
+            
+            <!-- Level 2 nav -->
+            {% if level1.list %}
+              <ul class="apidoc-sidebar-level-2">
+              {% for level2 in level1.list %}
+                <li class="apidoc-sidebar-section {% if level2.list %}has-toggle{% endif %}">
+                  {% assign alt_url = level2.url | append: '/'  %}
+                  {% if page.url == level2.url or page.url == alt_url %}
+                    {% assign link_active = true %}
+                  {% else %}
+                    {% assign link_active = false %}
+                  {% endif %}
+
+                  {% if level2.url %}<a class="apidoc-sidebar-link {% if link_active %}active{% endif %}" href="{{ level2.url }}">{{ level2.label }}</a>{% else %} {{ level2.label }} {% endif %}
+
+                  {% if level2.list %}<a href="/" class="apidoc-sidebar-toggle {% if page.url contains level2.url %}toggle-active{% endif %}" data-ui-toggle data-target="next"><span></span></a>{% endif %}
+
+                  <!-- Level 3 nav -->
+                  {% if level2.list %}
+                    <ul class="apidoc-sidebar-level-3 {% if page.url contains level2.url %}active{% endif %}">
+                    {% for level3 in level2.list %}
+                      <li class="apidoc-sidebar-section {% if level3.list %}has-toggle{% endif %}">
+                        {% assign alt_url = level3.url | append: '/'  %}
+                        {% if page.url == level3.url or page.url == alt_url %}
+                          {% assign link_active = true %}
+                        {% else %}
+                          {% assign link_active = false %}
+                        {% endif %}
+
+                        {% if level3.url %}<a class="apidoc-sidebar-link {% if link_active %}active{% endif %}" href="{{ level3.url }}">{{ level3.label }}</a>{% else %} {{ level3.label }} {% endif %}
+
+                        {% if level3.list %}<a href="#" class="apidoc-sidebar-toggle {% if page.url contains level3.url %}toggle-active{% endif %}" data-ui-toggle data-target="next"><span></span></a>{% endif %}
+
+                        <!-- Level 4 nav -->
+                        {% if level3.list %}
+                          <ul class="apidoc-sidebar-level-4 {% if page.url contains level3.url %}active{% endif %}">
+                          {% for level4 in level3.list %}
+                            <li class="apidoc-sidebar-section">
+                              {% assign alt_url = level4.url | append: '/'  %}
+                              {% if page.url == level4.url or page.url == alt_url %}
+                                {% assign link_active = true %}
+                              {% else %}
+                                {% assign link_active = false %}
+                              {% endif %}
+
+                              {% if level4.url %}<a class="apidoc-sidebar-link {% if link_active %}active{% endif %}" href="{{ level4.url }}">{{ level4.label }}</a>{% else %} {{ level4.label }} {% endif %}
+
+                              <!-- Level 5 nav -->
+                              {% if level4.list %}
+                                <ul class="apidoc-sidebar-level-5">
+                                {% for level5 in level4.list %}
+                                  <li class="apidoc-sidebar-section">
+                                    {% assign alt_url = level5.url | append: '/'  %}
+                                    {% if page.url == level5.url or page.url == alt_url %}
+                                      {% assign link_active = true %}
+                                    {% else %}
+                                      {% assign link_active = false %}
+                                    {% endif %}
+
+                                    {% if level5.url %}<a class="apidoc-sidebar-link {% if link_active %}active{% endif %}" href="{{ level5.url }}">{{ level5.label }}</a>{% else %}{{ level5.label }}{% endif %}
+                                  </li>
+                                {% endfor %}
+                                </ul>
+                              {% endif %}
+
+                            </li>
+                          {% endfor %}
+                          </ul>
+                        {% endif %}
+
+                      </li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+
+                </li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+
+          </li>
+        {% endfor %}
+        </ul>
+      </aside>      
+
+    </div>
+    <div class="apidoc-column-right eight columns">
+      <header class="apidoc-header">
+        <h1 class="apidoc-header-heading heading-big">{{ page.name }}</h1>
+        {% if page.description %}<p class="apidoc-header-description">{{ page.description }}</p>{% endif %}
+      </header>
+
+      <div class="apidoc-content">
+
+        {{ content }}
+
+      </div>
+    </div>
+  </div>
+</article>
+

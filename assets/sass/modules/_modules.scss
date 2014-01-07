@@ -1,0 +1,85 @@
+/*
+content-section
+teaser
+module-partnership
+hero
+tabs
+module-benefits
+module-example
+*/
+.dark-bkg{
+	background-color: $gray-bkg;
+}
+
+/************** teaser************/
+.teaser {
+	margin: em(15px) 0;
+}
+
+
+/************** hero ************/
+.hero{
+
+ 	background-color: $mainColor;
+  background-color: rgba($mainColor,.85);	
+	position: relative;
+	
+	.hero-content{
+		text-align: center;
+		overflow: hidden;
+		margin: 0 auto;
+
+		h2{
+			margin-bottom: 0;
+		}
+ 	}
+
+}
+
+
+/************** module-benefits parters page ************/
+.module-benefits{
+	h2{
+		text-align: left;
+	}
+			
+	@media (min-width: em(767px,16px)) {
+		h2{
+			text-align: right;
+			margin-top: em(5px);
+		}
+		
+	}
+}
+/**************  module-example ************/
+.module-examples{
+	background-color: $gray-bkg;
+	margin-bottom: em(30px);	
+}
+
+
+/******Accordion overwite******/
+ul.accordion{
+  border: none;
+  li{
+    margin: em(15px) 0;
+    border-top: none; 
+    >div.title{
+      padding: em(10px) em(15px);
+      border: 1px solid #dfe5e6;
+      &:after{
+        top: em(10px);
+      }
+    }     
+  }
+  >li.active{
+    border-top: none;
+    >div.title{
+      border-bottom: none;
+    }
+    .content{
+      border-bottom: 1px solid #dfe5e6;      
+    }
+  }
+}
+

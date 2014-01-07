@@ -1,0 +1,46 @@
+---
+layout: default
+section: dev
+active: tutorials
+---
+
+<article class="page-tutorial">
+  <div class="row">
+    <div class="tutorial-header-thumbnail three columns mobile-one">
+
+      <p class="tutorial-header-img"><img src="{{ page.image | asset_path }}"></p> 
+
+    </div>
+    <div class="tutorial-column-left tutorial-header-content nine columns mobile-three">
+
+      <header class="tutorial-header">
+        <h1 class="tutorial-header-heading heading-big">{{ page.name }}</h1>
+        <p class="tutorial-header-description">{{ page.description }}</p>      
+      </header>      
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="tutorial-column-sidebar three columns">
+
+      <aside class="tutorial-sidebar">
+        <p class="tutorial-navigation"><strong>Steps</strong></p>
+        <ol>
+          {% for item in page.sidebar %}
+          <li><a href="#{{ item.link }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ol>
+      </aside>      
+
+    </div>
+    <div class="tutorial-column-left nine columns">
+      <div class="tutorial-content">
+
+        {{ content }}
+
+      </div>
+    </div>
+  </div>
+</article>
+

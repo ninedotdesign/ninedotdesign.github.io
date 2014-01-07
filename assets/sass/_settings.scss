@@ -1,0 +1,42 @@
+// COLOR TWEAKS
+
+$mainColor: #0085CF;
+$mainLightestColor: #8DC9E8;
+$mainLightColor: #5EB0E5;
+$mainDarkColor: #125687;
+
+$secondaryColor: #DFE5E6;
+
+$alertColor: #FD4239;
+$alertDarkColor: #c9282d;
+
+$successColor: #00C375;
+$successDarkColor: #235d37;
+
+// Accent
+
+$orangeColor: #FF7000;
+$yellowColor: #FFB60F;
+
+// Grays
+
+$gray: #A5AEB6;
+$grayDark: #51626F;
+$black: #111C24;
+
+// Whites
+
+$white: #FFFFFF;
+
+// FOUNDATION TWEAKS
+
+$txtColor: $black;
+$headerFontColor: $black;
+$topBarBgColor: $black;
+$topBarDropToggleColor: $mainColor;
+
+$topBarBreakPoint: 930px;
+
+
+/* icon's vertically alignment*/
+.icon {vertical-align: middle}

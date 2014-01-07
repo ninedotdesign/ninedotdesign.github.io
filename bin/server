@@ -1,0 +1,30 @@
+#!/bin/bash
+
+function exit_hook {
+  kill -INT -- -$FIND_PID
+  wait $FIND_PID
+}
+trap exit_hook EXIT
+
+set -m
+
+echo "Running server" && \
+echo "https://$(hostname --fqdn 2>&1)" && \
+echo "-------------------------------------" && \
+echo "bin/server step 1: Run compass watch" && \
+echo "-------------------------------------" && \
+
+CONFIG=''
+[ "$ENV" == "production" ] && CONFIG='--config _config.production.yml'
+
+export ENV=test
+
+function compass {
+  bundle exec compass $1 assets --css-dir ../content/stylesheets
+}
+compass compile
+compass watch &
+set +m
+FIND_PID=$!
+
+bundle exec jekyll build --watch $CONFIG
