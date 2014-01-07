@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 ielt10 ielt9 ielt8 ielt7 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 ielt10 ielt9 ielt8 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ielt10 ielt9 lt-ie9 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ielt10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js iegt9" lang="en"> <!--<![endif]-->
+
+<head>
+  <script src="//cdn.optimizely.com/js/255025209.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#0085cf">
+  <meta name="application-name" content="Xively">
+  <meta name="description" content="Xively brings meaning to the Internet of Things through cloud based services that simplify and accelerate the creation, deployment, scaling and management of compelling products and solutions.">
+  <meta name="keywords" content="IoT, Internet of Things, cloud, public cloud, smart systems, IoTWorks, iobridge, cisco, devices, iOS, Apple, Microsoft, paas, platform as a service, open, arm, mbed, ti, raspberry pi, arduino">
+
+  <title>Libraries - Xively</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/app.css">
+
+  <!--[if gt IE 8]><!-->
+  <script type="text/javascript" src="//use.typekit.net/cwq5rkg.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!--<![endif]-->
+
+  <!--[if lt IE 9]> 
+  <script type="text/javascript" src="//use.typekit.net/ruq4lqv.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript" src="/assets/cosmui/ui.respond.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="/assets/zurbfoundation/modernizr.foundation.js"></script>
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="search-bar">
+  <div class="search-bar-inner">
+		<div class="search-bar-right">
+			<a class="search-bar-login" href="/login/">Login</a>
+			<form class="module-search-form" action="/search" method="get">
+			    <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search Xively.com">
+			    <button type="submit" for="header-search" class="module-search-label icon-search" ></button>
+			</form>
+		</div>
+  </div>
+</div>
+
+<header class="app-header contain-to-grid" role="banner">
+  <!--# block name="logged_out_header" -->
+    <div class="headermenu">
+  <nav class="app-header-bar top-bar clearfix" role="navigation">
+    <ul class="app-header-branding">
+      <li class="app-header-logo name">
+        <h1 class="app-header-logo-heading"> <a class="app-header-logo-link" href="/">Xively</a> </h1>
+      </li>
+      <li class="app-header-toggle toggle-topbar"> <a href="#"> <span class="app-header-toggle-text">Menu</span> <i class="icon-menu"></i> </a> </li>
+    </ul>
+    <section class="app-header-content"> 
+      
+      <!-- Left Nav Section --> 
+      
+      <ul class="left">
+
+
+
+  <li class="app-header-platform  has-dropdown">
+    <a href="/whats_xively/">Platform</a>
+    <ul class="dropdown">
+      <li><a href="/whats_xively/">What is Xively?</a></li>
+      <li><a href="/using_xively/">How it Works</a></li>
+      <li><a href="/testdrive/">Test Drive</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/get_started/">Get Started</a></li>
+    </ul>
+  </li>
+
+  
+  <li class="app-header-consulting">
+  
+    <a href="/consulting/">Services</a>
+  </li>
+
+  <li class="app-header-ecosystem  has-dropdown">
+    <a href="/showcase/">Ecosystem</a>
+    <ul class="dropdown">
+      <li><a href="/showcase/">Customers</a></li>
+      <li><a href="/partners/">Partner Gallery</a></li>
+      <li><a href="/partners/join/">Join the Network</a></li>
+    </ul>
+  </li>
+  <li class="app-header-newsevents  has-dropdown">
+    <a href="/news/">News & Events</a>
+    <ul class="dropdown">
+      <li><a href="/news/">In the News</a></li>
+      <li><a href="/press_releases/">Press Releases</a></li>
+      <li><a href="/events/">Events</a></li>
+      <li><a href="/awards/">Awards</a></li>
+    </ul>
+  </li>
+	<li class="has-dropdown active subnav-active">
+	  <a href="/dev/">Dev Center</a>
+	  <ul class="dropdown">
+	    <li><a href="/dev/tutorials/">Tutorials</a></li>
+	    <li class="active"><a href="/dev/libraries/">Libraries</a></li>
+	    <li><a href="/dev/hardware/">Hardware</a></li>
+	    <li><a href="/dev/docs/api/">API Docs</a></li>
+	    <li><a href="/dev/help/">Help</a></li>
+	  </ul>
+	</li>
+
+
+
+</ul>
+ 
+      
+      <!-- Right Nav Section -->
+      <ul class="right">
+        
+<li class="app-header-search has-dropdown">
+  <a href="/search/"><i class="icon-search"></i></a>
+  <ul class="dropdown">
+    <li class="module-search">
+      <h4>Search</h4>
+      <form class="module-search-form" action="/search" method="get">
+        <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search">
+        <label for="header-search" class="module-search-label icon-search"></label>
+      </form>
+    </li>
+  </ul>
+</li>
+
+<li class="app-header-search-small module-search">
+  <form class="module-search-form" action="/search" method="get">
+    <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search">
+    <label for="header-search" class="module-search-label icon-search"></label>
+  </form>
+</li>
+
+        <li class="app-header-login "> <a href="/login/">Login</a> </li>
+        <li class="app-header-signup "> <a class="button orange" href="/get_started/">Get Started</a> </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+
+  <!--# endblock -->
+  <!--# include virtual="/dynamic_partials/header?page_type=dev&subsection=libraries" stub="logged_out_header" -->
+  
+<nav class="subnav-bar">
+  <div class="contain">
+    <ul class="nav-bar clearfix">
+      
+
+
+       <li><a href="/dev/tutorials/">Tutorials</a>
+      </li>
+      <li class="active"><a href="/dev/libraries/">Libraries</a>
+      </li>
+      <li><a href="/dev/hardware/">Hardware</a>
+      </li>
+      <li><a href="/dev/docs/api/">API Docs</a>
+      </li>
+      <li><a href="/dev/help/">Help</a>
+      </li>
+      
+      <div class="social"> <a href="http://blog.xively.com" class="bloglink">BLOG</a>
+        <div class="social-box"></div>
+        <div class="clearfix"></div>
+      </div>
+    </ul>
+  </div>
+</nav>
+<div class="social-drawer">
+  <div> <a href="https://plus.google.com/+xively" target="_blank" class="btng"><img src="/assets/gplus.png" alt="Google+" /></a>
+    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FXively&amp;width=170&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=false&amp;appId=263181137044005" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+    <iframe allowtransparency="true" frameborder="0" scrolling="no" data-show-screen-name="false"
+src="//platform.twitter.com/widgets/follow_button.html?screen_name=XivelyIOT"
+style="width:210px; height:20px; margin-left:20px;" class="twitbox"></iframe>
+    <a class="email" href="mailto:?subject=Xively&body=https://xively.com"><img src="/assets/mail.png" alt="email us" /></a> </div>
+  <!-- social drawer -->
+  <div class="clearfix"></div>
+</div>
+
+
+</header>
+
+
+    <section class="app-main" role="main">
+      <div class="app-main-inner">
+
+        <section class="dev-center library">
+  <section>
+  <div class="row">
+    <div class="twelve columns">
+      <h1 class="big-heading font-light key-message">Xively Libraries</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns eleven">
+      <p class="body-font font-light">Work in the language of your choice. <br><br> Our libraries make integrating with Xively's API frictionless, letting you write code for your devices, applications, and services with easy Xively integration. All Xively libraries are Open Source and hosted on Github, so that you can use, contribute, and request features on them freely.<br><br>Got an idea for a library? <strong><a href="mailto:support@xively.com?subject=Library Request" id="js-ga-dev-libraries-mailto">Let us know</a>!</strong></p>
+    </div>
+  </div>
+
+</section>
+
+  <section id="android" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/Android.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">Android</h2>
+        <p>A lightweight library to let you write native Android apps for you or your end user to monitor, control, and interact with Xively data.  Conforms to Google's best practices.</p>
+    </div>
+    <div class="four columns">
+      <a class="button large" href="https://github.com/xively/XivelyAndroid">Get the library<i class="button-icon icon-arrow-right"></i></a>
+      <p class="hide-for-small">
+        <span><a href="https://github.com/xively/XivelyAndroid/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section> <!-- End of Lib -->
+
+  <section id="arduino" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/Arduino.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">Arduino</h2>
+        <p>Connect your Arduino to the world.  Log sensor data, control its actions through Xively, and build connected experiences around the Arduino platform. </p>
+         <p class="show-for-small">
+           <span><a target="_blank" href="https://github.com/xively/xively-android"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a target="_blank" class="button large" href="https://github.com/xively/xively_arduino">Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="https://github.com/xively/xively_arduino/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section> <!-- End of Lib -->
+
+  <section id="mbed" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/mbed.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">ARM® mbed</h2>
+        <p>Develop on industry-standard ARM architectures to make your code easily portable to production-grade chips. Xively has teamed with ARM to ensure that connection is effortless.</p>
+         <p class="show-for-small">
+           <span><a href="https://github.com/xively/libxively/" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a href="http://mbed.org/users/xively/code/" class="button large" target="_blank">Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="http://mbed.org/users/xively/code/" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section><!-- End of Lib -->
+
+  <section id="c" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/C.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">C</h2>
+        <p>Our C library is an extremely portable way to interface your embedded product with the Xively API, with support for POSIX as well as real-time operating systems.  (See the library's documentation for the latest information).</p>
+         <p class="show-for-small">
+           <span><a href="https://github.com/xively/libxively/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a class="button large" href="https://github.com/xively/libxively" target="_blank">Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="https://github.com/xively/libxively/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section><!-- End of Lib -->
+
+  <section id="imp" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/electric_imp.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">Electric Imp</h2>
+        <p>Add WiFi connectivity to your product in the size of a standard SD card.  Our Electric Imp helper code makes it easy to connect the popular imp to Xively.</p>
+         <p class="show-for-small">
+           <span><a href="https://github.com/xively/xively-imp/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a class="button large" href="https://github.com/xively/xively-imp" target="_blank">Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="https://github.com/xively/xively-imp/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section><!-- End of Lib -->
+
+  <section id="java" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/Java.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">Java</h2>
+        <p>A fully-featured library that takes all the plumbing work out of connecting to Xively.  Written to be comprehensive and self-contained, so you can drop it in to your application and go.</p>
+         <p class="show-for-small">
+           <span><a target="_blank" href="https://github.com/xively/Xively4J/issues"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a class="button large" href="https://github.com/xively/Xively4J" target="_blank">Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="https://github.com/xively/Xively4J/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section><!-- End of Lib -->
+
+  <section id="javascript" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/JavaScript.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">JavaScript</h2>
+        <p>Create real-time visualizations, interactive websites and GUIs in-browser that connect directly to Xively feeds.</p>
+         <p class="show-for-small">
+           <span><a target="_blank" href="https://github.com/xively/xively-js/issues"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a class="button large" href="https://github.com/xively/xively-js" target="_blank"K>Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="https://github.com/xively/xively-js/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section><!-- End of Lib -->
+
+  <section id="objc" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/Objective-C.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">Objective-C</h2>
+        <p>Create native iPhone, iPad, iPod Touch and Mac OS applications that easily connect to Xively.  Build interactive visualisations, dashboards, and bi-directional control into your products with an iOS or OSX app.</p>
+         <p class="show-for-small">
+           <span><a target="_blank" href="https://github.com/xively/XivelyObjectiveC/issues"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a class="button large" href="https://github.com/xively/XivelyObjectiveC" target="_blank">Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="https://github.com/xively/XivelyObjectiveC/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section><!-- End of Lib -->
+
+  <section id="php" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/PHP.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">PHP</h2>
+        <p>Connect web elements, write scripts, and interface mySQL databases directly to Xively data with this chainable PHP 5 library.</p>
+         <p class="show-for-small">
+           <span><a target="_blank" href="https://github.com/xively/xively-php/issues"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a class="button large" href="https://github.com/xively/xively-php" target="_blank">Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="https://github.com/xively/xively-php/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section><!-- End of Lib -->
+
+  <section id="python" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/Python.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">Python</h2>
+        <p>Create web app back-ends with Django, tackle research and scientific applications with tool kits like NumPy and Matplotlib, and connect Linux systems from supercomputers down to the Raspberry Pi and BeagleBone.</p>
+         <p class="show-for-small">
+           <span><a target="_blank" href="https://github.com/xively/xively-python/issues"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a class="button large" href="https://github.com/xively/xively-python" target="_blank">Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="https://github.com/xively/xively-python/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section><!-- End of Lib -->
+
+  <section id="ruby" class="row">
+    <div class="two columns mobile-one">
+      <img src="/assets/library-images/Ruby.png"/>
+    </div>
+    <div class="six columns mobile-three">
+      <h2 class="heading-small">Ruby</h2>
+        <p>Easily integrate server-side applications and services into your connected product experience with a Ruby library that makes it simple to communicate with Xively in Ruby.</p>
+         <p class="show-for-small">
+           <span><a href="https://github.com/xively/xively-rb/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+        </p>
+    </div>
+    <div class="four columns">
+      <a class="button large" href="https://github.com/xively/xively-rb" target="_blank">Get the Library <i class="button-icon icon-arrow-right"></i></a>
+       <p class="hide-for-small">
+         <span><a href="https://github.com/xively/xively-rb/issues" target="_blank"><strong>Contribute</strong> (or file a bug)</a></span>
+      </p>
+    </div>
+  </section><!-- End of Lib -->
+
+
+  <!-- More our own libraries here -->
+
+  <!-- <div class="row">
+    <div class="twelve columns">
+      <h2 class="heading-medium font-light">3rd Party Libraries</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      <ul class="block-grid two-up">
+        <li>
+          <h2 class="heading-medium font-light">Python</h2>
+          <h5><a href="#">Library name</a> by <em>Webficient</em></h5>
+          <p>A Ruby wrapper for the Twilio REST API and Twilio response handlers</p>
+
+          <h5><a href="#">Library name</a> by <em>Webficient</em></h5>
+          <p>A Ruby wrapper for the Twilio REST API and Twilio response handlers</p>
+        </li>
+        <li>
+          <h2 class="heading-medium font-light">C</h2>
+          <h5><a href="#">Library name</a> by <em>Webficient</em></h5>
+          <p>A Ruby wrapper for the Twilio REST API and Twilio response handlers</p>
+
+          <h5><a href="#">Library name</a> by <em>Webficient</em></h5>
+          <p>A Ruby wrapper for the Twilio REST API and Twilio response handlers</p>
+        </li>
+         <li>
+          <h2 class="heading-medium font-light">Java</h2>
+          <h5><a href="#">Library name</a> by <em>Webficient</em></h5>
+          <p>A Ruby wrapper for the Twilio REST API and Twilio response handlers</p>
+
+          <h5><a href="#">Library name</a> by <em>Webficient</em></h5>
+          <p>A Ruby wrapper for the Twilio REST API and Twilio response handlers</p>
+        </li>
+         <li>
+          <h2 class="heading-medium font-light">Ruby</h2>
+          <h5><a href="#">Library name</a> by <em>Webficient</em></h5>
+          <p>A Ruby wrapper for the Twilio REST API and Twilio response handlers</p>
+
+          <h5><a href="#">Library name</a> by <em>Webficient</em></h5>
+          <p>A Ruby wrapper for the Twilio REST API and Twilio response handlers</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+   -->
+
+</section>
+
+
+      </div>
+    </section>
+
+    <footer class="app-footer" role="contentinfo">
+  <div class="app-footer-inner row">
+    <section class="app-footer-links eight columns">
+    <ul class="block-grid four-up mobile-two-up">
+      <li class="footer-section">
+      <h3 class="footer-section-title">About Us</h3>
+      <ul class="no-bullet">
+        <li class="footer-accent-links"><a href="/login/">Login</a> / <a href="/get_started/">Get Started</a></li>
+        <li><a href="/whats_xively/">Platform</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/partners/">Partners</a></li>
+        <li><a href="/company_info/">Company info</a></li>
+        <li><a href="/jobs/">Jobs</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Support</h3>
+      <ul class="no-bullet">
+        <li><a href="/dev/docs/api/">API Documentation</a></li>
+        <li><a href="/dev/libraries/">Libraries</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/dev/help/">Help</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Learn</h3>
+      <ul class="no-bullet">
+        <li><a href="/showcase/">Showcase</a></li>
+        <li><a href="http://blog.xively.com">Blog</a></li>
+        <li><a href="/dev/tutorials/">Tutorials</a></li>
+        <li><a href="/dev/hardware/">Hardware</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Media</h3>
+      <ul class="no-bullet">
+        <li><a href="/news/">News</a></li>
+        <li><a href="/press_releases/">Press Releases</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/awards/">Awards</a></li>
+        <li class="footer-social-icons">
+        <a href="https://www.facebook.com/Xively" class="facebook"><i class="icon-facebook"></i></a>
+        <a href="http://twitter.com/XivelyIOT" target="_blank" class="twitter"><i class="icon-twitter"></i></a>
+        <a href="https://plus.google.com/u/0/107384947738095536561" class="google-plus"><i class="icon-google-plus"></i></a>
+        </li>
+      </ul>
+      </li>
+    </ul>
+    </section>
+
+    <section class="app-footer-copyright four columns">
+    <h1 class="footer-logo">
+      <a href="/">Xively</a>
+    </h1>
+    <p class="footer-company">Copyright &copy; 2003-2013 LogMeIn, Inc. <br>All rights reserved.</p>
+    <p class="footer-terms"><a href="https://secure.logmein.com/policies/privacy.aspx">Legal Info</a></p>
+    <a class="footer-contact" href="/contact_us/">Contact Us <i class="button-icon icon-arrow-right"></i></a>
+    </section>
+  </div>
+</footer>
+
+
+  </div>
+
+  <script type="text/javascript" src="/assets/app.js"></script>
+  <script type="text/javascript">
+  window._gaq = [['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],['_setAccount','UA-20796726-3'],['_trackPageview'],['_trackPageLoadTime'], ['_setDomainName', 'xively.com'],['_setAllowHash', false]];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'
+  });
+</script>
+
+</body>
+</html>

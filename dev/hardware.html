@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 ielt10 ielt9 ielt8 ielt7 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 ielt10 ielt9 ielt8 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ielt10 ielt9 lt-ie9 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ielt10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js iegt9" lang="en"> <!--<![endif]-->
+
+<head>
+  <script src="//cdn.optimizely.com/js/255025209.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#0085cf">
+  <meta name="application-name" content="Xively">
+  <meta name="description" content="Xively brings meaning to the Internet of Things through cloud based services that simplify and accelerate the creation, deployment, scaling and management of compelling products and solutions.">
+  <meta name="keywords" content="IoT, Internet of Things, cloud, public cloud, smart systems, IoTWorks, iobridge, cisco, devices, iOS, Apple, Microsoft, paas, platform as a service, open, arm, mbed, ti, raspberry pi, arduino">
+
+  <title>Hardware - Xively</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/app.css">
+
+  <!--[if gt IE 8]><!-->
+  <script type="text/javascript" src="//use.typekit.net/cwq5rkg.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!--<![endif]-->
+
+  <!--[if lt IE 9]> 
+  <script type="text/javascript" src="//use.typekit.net/ruq4lqv.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript" src="/assets/cosmui/ui.respond.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="/assets/zurbfoundation/modernizr.foundation.js"></script>
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="search-bar">
+  <div class="search-bar-inner">
+		<div class="search-bar-right">
+			<a class="search-bar-login" href="/login/">Login</a>
+			<form class="module-search-form" action="/search" method="get">
+			    <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search Xively.com">
+			    <button type="submit" for="header-search" class="module-search-label icon-search" ></button>
+			</form>
+		</div>
+  </div>
+</div>
+
+<header class="app-header contain-to-grid" role="banner">
+  <!--# block name="logged_out_header" -->
+    <div class="headermenu">
+  <nav class="app-header-bar top-bar clearfix" role="navigation">
+    <ul class="app-header-branding">
+      <li class="app-header-logo name">
+        <h1 class="app-header-logo-heading"> <a class="app-header-logo-link" href="/">Xively</a> </h1>
+      </li>
+      <li class="app-header-toggle toggle-topbar"> <a href="#"> <span class="app-header-toggle-text">Menu</span> <i class="icon-menu"></i> </a> </li>
+    </ul>
+    <section class="app-header-content"> 
+      
+      <!-- Left Nav Section --> 
+      
+      <ul class="left">
+
+
+
+  <li class="app-header-platform  has-dropdown">
+    <a href="/whats_xively/">Platform</a>
+    <ul class="dropdown">
+      <li><a href="/whats_xively/">What is Xively?</a></li>
+      <li><a href="/using_xively/">How it Works</a></li>
+      <li><a href="/testdrive/">Test Drive</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/get_started/">Get Started</a></li>
+    </ul>
+  </li>
+
+  
+  <li class="app-header-consulting">
+  
+    <a href="/consulting/">Services</a>
+  </li>
+
+  <li class="app-header-ecosystem  has-dropdown">
+    <a href="/showcase/">Ecosystem</a>
+    <ul class="dropdown">
+      <li><a href="/showcase/">Customers</a></li>
+      <li><a href="/partners/">Partner Gallery</a></li>
+      <li><a href="/partners/join/">Join the Network</a></li>
+    </ul>
+  </li>
+  <li class="app-header-newsevents  has-dropdown">
+    <a href="/news/">News & Events</a>
+    <ul class="dropdown">
+      <li><a href="/news/">In the News</a></li>
+      <li><a href="/press_releases/">Press Releases</a></li>
+      <li><a href="/events/">Events</a></li>
+      <li><a href="/awards/">Awards</a></li>
+    </ul>
+  </li>
+	<li class="has-dropdown active subnav-active">
+	  <a href="/dev/">Dev Center</a>
+	  <ul class="dropdown">
+	    <li><a href="/dev/tutorials/">Tutorials</a></li>
+	    <li><a href="/dev/libraries/">Libraries</a></li>
+	    <li class="active"><a href="/dev/hardware/">Hardware</a></li>
+	    <li><a href="/dev/docs/api/">API Docs</a></li>
+	    <li><a href="/dev/help/">Help</a></li>
+	  </ul>
+	</li>
+
+
+
+</ul>
+ 
+      
+      <!-- Right Nav Section -->
+      <ul class="right">
+        
+<li class="app-header-search has-dropdown">
+  <a href="/search/"><i class="icon-search"></i></a>
+  <ul class="dropdown">
+    <li class="module-search">
+      <h4>Search</h4>
+      <form class="module-search-form" action="/search" method="get">
+        <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search">
+        <label for="header-search" class="module-search-label icon-search"></label>
+      </form>
+    </li>
+  </ul>
+</li>
+
+<li class="app-header-search-small module-search">
+  <form class="module-search-form" action="/search" method="get">
+    <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search">
+    <label for="header-search" class="module-search-label icon-search"></label>
+  </form>
+</li>
+
+        <li class="app-header-login "> <a href="/login/">Login</a> </li>
+        <li class="app-header-signup "> <a class="button orange" href="/get_started/">Get Started</a> </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+
+  <!--# endblock -->
+  <!--# include virtual="/dynamic_partials/header?page_type=dev&subsection=hardware" stub="logged_out_header" -->
+  
+<nav class="subnav-bar">
+  <div class="contain">
+    <ul class="nav-bar clearfix">
+      
+
+
+       <li><a href="/dev/tutorials/">Tutorials</a>
+      </li>
+      <li><a href="/dev/libraries/">Libraries</a>
+      </li>
+      <li class="active"><a href="/dev/hardware/">Hardware</a>
+      </li>
+      <li><a href="/dev/docs/api/">API Docs</a>
+      </li>
+      <li><a href="/dev/help/">Help</a>
+      </li>
+      
+      <div class="social"> <a href="http://blog.xively.com" class="bloglink">BLOG</a>
+        <div class="social-box"></div>
+        <div class="clearfix"></div>
+      </div>
+    </ul>
+  </div>
+</nav>
+<div class="social-drawer">
+  <div> <a href="https://plus.google.com/+xively" target="_blank" class="btng"><img src="/assets/gplus.png" alt="Google+" /></a>
+    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FXively&amp;width=170&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=false&amp;appId=263181137044005" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+    <iframe allowtransparency="true" frameborder="0" scrolling="no" data-show-screen-name="false"
+src="//platform.twitter.com/widgets/follow_button.html?screen_name=XivelyIOT"
+style="width:210px; height:20px; margin-left:20px;" class="twitbox"></iframe>
+    <a class="email" href="mailto:?subject=Xively&body=https://xively.com"><img src="/assets/mail.png" alt="email us" /></a> </div>
+  <!-- social drawer -->
+  <div class="clearfix"></div>
+</div>
+
+
+</header>
+
+
+    <section class="app-main" role="main">
+      <div class="app-main-inner">
+
+        <section class="dev-center page-hardware">
+  <div class="row">
+    <div class="columns eight">
+      <h1 class="heading-big key-message">Connected Hardware</h1>
+      <p class="heading-small font-light">Ethernet, WiFi, Cellular, Bluetooth, Zigbee, and more … Connect to Xively any way you'd like, and from any platform:</p>
+      <ul class="block-grid four-up text-center platform-logo mobile-four-up small-block-grid-3">
+        <li>
+          <img src="/assets/hardware_page_logos/mbed_300.png" class="columns eight centered" alt="mbed"/>
+        </li>
+        <li>
+          <img src="/assets/hardware_page_logos/linux.png" class="columns seven centered" alt="linus" />
+        </li>
+        <li>
+          <img src="/assets/hardware_page_logos/Arduino_300.png" class="columns eight centered" alt="Arduino"/>
+        </li>
+        <li>
+          <img src="/assets/hardware_page_logos/Android.png" class="columns eight centered" alt="Andriod" />
+        </li>
+        <li>
+          <img src="/assets/hardware_page_logos/ios.jpg" class="columns eight centered" alt="ios" />
+        </li>
+        <li>
+          <img src="/assets/hardware_page_logos/electric-imp_300.png" class="columns eight centered" alt="electric_imp" />
+        </li>
+        <li class="text-center">
+          <h2 class="heading-smallest">Embedded C</h2>
+        </li>
+
+      </ul>
+    </div>
+    <div class="columns four example-hardware">
+      <a href="/dev/kits/"><img src="/assets/Jumpstart_kit.jpg" class="mobile-two" alt="jumpstart-kit" /></a>
+      <h3 class="heading-small font-light font-blue">Get a Jumpstart Kit</h3>
+      <p>Xively works with select hardware partners on a line of Jumpstart Kits that are tailored for building a connected product, out of the box.</p>
+      <a href="/dev/kits/">Learn more about Xively Jumpstart Kits</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns eight">
+      <h3 class="heading-medium font-light">Search Tested Solutions</h3>
+      <p>Xively is enabled on any major platform you can think of.  Whether you are developing on Linux, Android, an Embedded C OS (Realtime or non), Arduino, electric imp … the options are endless.</p>
+      <p>Below are just a few examples of the popular hardware setups customers use to build connected products.</p>
+    </div>
+    <div class="twelve columns" id="tested-solutions-list">
+
+      <div class="six mobile-four clearfix left" id="search-solutions">
+        <input class="search twelve" placeholder="Search Solutions for keywords" />
+        <label class="search-icon"><span class="icon icon-search"></span></label>
+      </div>
+
+      <dl class="six mobile-four filter sub-nav">
+          <dd class="active" id="filter-none"><a href="#">Show all</a></dd>
+          <dd id="filter-prototyping"><a href="#" id="js-ga-dev-hardware-filter-prototyping"><strong>Prototyping</strong> Solutions</a></dd>
+          <dd id="filter-commercial"><a href="#" id="js-ga-dev-hardware-filter-commercial"><strong>Commercial</strong> Solutions</a></dd>
+
+      </dl>
+      <div class="row">
+        <div class="columns twelve mobile-four">
+          <p class="hardware-showing">Showing <strong><span>19</span> of 19</strong></p>
+        </div>
+      </div>
+
+      <ul class="sort-by twelve hide-for-small">
+          <li class="columns four"><h4 class="sort btn font-light" data-sort="board"><span class="icon  icon-arrow-right"></span>&nbsp;Board</h4></li>
+          <li class="columns four"><h4 class="sort btn font-light" data-sort="platform"><span class="icon  icon-arrow-right"></span>&nbsp;Platform</h4></li>
+          <li class="columns four"><h4 class="sort btn font-light" data-sort="gateway"><span class="icon  icon-arrow-right"></span>&nbsp;Gateway</h4></li>
+      </ul>
+
+      <ul class="list">
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">TSmarT </span><span class="category">commercial</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Embedded C</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="gateway">WiFi</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>TST</span></p>
+            <p>Core Architecture <span>32 bit ARM Cortex M3 430</span></p>
+            <p>Key Feature <span>WiFi with Available expansion modules: RFID, NFC, GPS, RS-232, RS-485</span></p>
+
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">SimpleLinks </span><span class="category">commercial</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Linux, Android</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="gateway">WiFi</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>TI</span></p>
+            <p>Core Architecture <span>MSP 430</span></p>
+            <p>Key Feature <span>CC 3000 WiFi</span></p>
+
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">IMX53QSB</span><span class="category">commercial</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Linux, Android</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>Freescale</span></p>
+            <p>Core Architecture <span>ARM Cortex A8</span></p>
+            <p>Key Feature <span>iMX53 1 GHz, FPU, Ethernet, A/V, USB, SATA, 1 GB DDR3 memory</span></p>
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Hitex OM13031</span><span class="category">commercial</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">FreeRTOS</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>NXP</span></p>
+            <p>Core Architecture <span>ARM Cortex M4 &amp; M0</span></p>
+            <p>Key Feature <span>LPC4300 (dual-core MCU), FPU, PoE, USB OTG, Audio DAC/ADC</span></p>
+
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Beaglebone</span><span class="category">prototyping</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Linux, Android</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>TI</span></p>
+            <p>Core Architecture <span>ARM Cortex A8</span></p>
+            <p>Key Feature <span>Sitara 700MHz, FPU, Ethernet</span></p>
+
+          </div>
+        </li>
+
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">RX62N</span><span class="category">commercial</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">FreeRTOS</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>Renesas</span></p>
+            <p>Core Architecture <span>RX600</span></p>
+            <p>Key Feature <span>RX62N, FPU, Ethernet, USB OTG, accelerometer, JTAG, SD-card</span></p>
+
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Raspberry Pi</span><span class="category">prototyping</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Linux</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>Broadcom</span></p>
+            <p>Core Architecture <span>ARM11</span></p>
+            <p>Key Feature <span>512Mb RAM, ARM1176JZF-S 700 MHz MPU, VideoCore IV GPU, 2 USB, HDMI, Ethernet</span></p>
+
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Android PC 8750</span><span class="category">commercial</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Android</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>VIA</span></p>
+            <p>Core Architecture <span>ARM 800 MHz</span></p>
+            <p>Key Feature <span>DDR3 512MB Memory, 2GB NAND Flash, Built-in 2D/3D Graphic Resolution up to 720p, HDMI, VGA, USB 2.0 (x4), Audio out / Mic in, microSD Slot</span></p>
+
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">LPCXpresso</span><span class="category">commercial</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">FreeRTOS</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet Optional</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>NXP</span></p>
+            <p>Core Architecture <span>LPC1769 Cortex M3</span></p>
+            <p>Key Feature <span>64 kB SRAM, 512 kB Flash, 4xUART, 3xI2C, SPI, 2xSSP, 2xCAN, PWM, USB 2.0 Device/Host/OTG, RTC, Ethernet, I2S,</span></p>
+
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">ARM mbed LPC1768</span><span class="category">prototyping</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Embedded C/C++</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>NXP</span></p>
+            <p>Core Architecture <span>ARM Cortex-M3</span></p>
+            <p>Key Feature <span>LPC17xx,100 MHz ARM with 64 KB of SRAM, 512 KB of Flash, Ethernet, USB OTG, SPI, I2C, UART, CAN,  GPIO, PWM, ADC, DAC</span></p>
+
+          </div>
+        </li>
+
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Zolertia Z1</span><span class="category">commercial</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Embedded C</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">6loWPAN</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>TI</span></p>
+            <p>Core Architecture <span>MSP430</span></p>
+            <p>Key Feature <span>MSP430, 16 MHz, CC2420, accelerometer, 6loWPAN, battery</span></p>
+
+          </div>
+        </li>
+
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">PIC32 Ethernet Kit</span><span class="category">commercial</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Embedded C</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>Microchip</span></p>
+            <p>Core Architecture <span>PIC32MX</span></p>
+            <p>Key Feature <span>32-bit, ethernet, 32 kHz</span></p>
+
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Arduino Uno</span><span class="category">prototyping</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Arduino</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet, WiFi, Cellular</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>Atmel</span></p>
+            <p>Core Architecture <span>ATmega328</span></p>
+            <p>Key Feature <span>14 Digital I/O Pins (of which 6 provide PWM output), 6 Analog Input Pins, 32 KB Flash, 2 KB SRAM, 16 MHz clock</span></p>
+
+          </div>
+        </li>
+
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Arduino Due</span><span class="category">prototyping</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Arduino</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet, WiFi, Cellular</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>Atmel</span></p>
+            <p>Core Architecture <span>AT91SAM3X8E</span></p>
+            <p>Key Feature <span> 54 Digital I/O Pins (of which 12 provide PWM output), 12 Analog Input Pins, 2 Analog Outputs Pins, 512 KB Flash, 96 KB SRAM, 84 MHz clock</span></p>
+
+          </div>
+        </li>
+
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Arduino Ethernet</span><span class="category">prototyping</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Arduino</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>Atmel</span></p>
+            <p>Core Architecture <span>AVR ATmega328</span></p>
+            <p>Key Feature <span>14 Digital I/O Pins (of which 4 provide PWM output), 6 analog In, 32 KB flash, 2 KB SRAM, 1 KB EEPROM, 16 Mhz clock</span></p>
+
+          </div>
+        </li>
+
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Arduino Mega 2560</span><span class="category">prototyping</span></h4>
+            </li>
+            <li class="board">
+              <h4 class="font-light"><span class="platform">Arduino</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet, WiFi, Cellular</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>Atmel</span></p>
+            <p>Core Architecture <span>AVR ATmega2560</span></p>
+            <p>Key Feature <span>Microcontroller        ATmega2560, Operating Voltage        5V, Input Voltage (recommended)        7-12V, Input Voltage (limits)        6-20V, Digital I/O Pins        54 (of which 15 provide PWM output), Analog Input Pins        16, DC Current per I/O Pin        40 mA, DC Current for 3.3V Pin        50 mA, Flash Memory        256 KB of which 8 KB used by bootloader, SRAM        8 KB, EEPROM        4 KB, Clock Speed        16 MHz</span></p>
+
+          </div>
+        </li>
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">Arduino Leonardo R3</span><span class="category">prototyping</span></h4>
+            </li>
+            <li class="board">
+              <h4 class="font-light"><span class="platform">Arduino</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">Ethernet, WiFi, Cellular</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>Atmel</span></p>
+            <p>Core Architecture <span>AVR ATmega32u4</span></p>
+            <p>Key Feature <span>Microcontroller        ATmega32u4, Operating Voltage        5V, Input Voltage (recommended)        7-12V, Input Voltage (limits)        6-20V, Digital I/O Pins        20, PWM Channels        7, Analog  Input Channels        12, DC Current per I/O Pin        40 mA, DC Current for 3.3V Pin        50 mA, Flash Memory        32 KB (ATmega32u4) of which 4 KB used by bootloader, SRAM        2.5 KB (ATmega32u4), EEPROM        1 KB (ATmega32u4), Clock Speed        16 MHz</span></p>
+
+          </div>
+        </li>
+
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">RedBack 1.0</span><span class="category">prototyping</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Arduino</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">WiFi</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>LinkSprite</span></p>
+            <p>Core Architecture <span>AVR ATmega328P</span></p>
+            <p>Key Feature <span>Yellowjacket compatible, Up to 12 dig I/O pins, 6 analog ins, 32KB flash RAM, 2KB SRAM, 1KB EEPR, 802.11b 1 and 2 mbps, WEP, WPA, and WPA2 security</span></p>
+
+          </div>
+        </li>
+
+        <li class="twelve">
+          <ul class="block-grid three-up mobile-three-up">
+            <li class="board">
+              <h4 class="font-light"><span class="triangle-top"></span><span class="board">DiamondBack 1.0</span><span class="category">prototyping</span></h4>
+            </li>
+            <li>
+              <h4 class="font-light"><span class="platform">Arduino</span></h4>
+            </li>
+            <li>
+              <h4  class="font-light"><span class="gateway">WiFi</span></h4>
+            </li>
+          </ul>
+          <div class="columns twelve key-features hide">
+            <p>Vendor <span>LinkSprite</span></p>
+            <p>Core Architecture <span>AVR ATmega328P</span></p>
+            <p>Key Feature <span>up to 14 digital I/O pins, 6 analog input pins, 32KB flash RAM (2KB used for bootloader), 2KB SRAM, 1KB EEPROM, lower profile USB 5-pin mini-B connector, auto-switchable power between USB and external DC power, 2-pin JST connector allows for more varied external power options (JST to DC barrel jack, Litihium-ion battery pack, etc.), 802.11b 1 and 2 mbps wireless connectivity, on-board PCB antenna, switchable interrupt between INT0 and digital pin 8, supports infrastructure mode (BSS) and adhoc (IBSS) network modes, support for WEP, WPA, and WPA2 security, LED attached to digital pin 9 used to indicate a successful wireless connection</span></p>
+
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- hardware partners-->
+  <section class="row">
+    <div class="columns twelve">
+      <h2 class="heading-medium font-light">Featured hardware partners</h2>
+      <h3 class="font-light body-font">Xively Technology Partners are a network of hardware and service providers who share our vision of a connected world, and work with us to make it frictionless to use their products with ours</h3>
+    </div>
+
+    <div class="columns twelve">
+      <ul class="block-grid two-up mobile-two-up partners">
+        <li>
+          <div class="three columns">
+            <img src="/assets/hardware_page_logos/econais_300.png" alt="econais" />
+          </div>
+
+          <div class="nine columns">
+            <h2 class="heading-smallest">eConais</h2>
+              <br>
+              <p>Build enterprise-grade OEM wireless modules into your product, with a native Xively backend.
+              <br><a href="http://econais.com/" id="js-ga-dev-hardware-econais">Go to <strong>http://econais.com</strong></a></p>
+          </div>
+
+        </li>
+
+        <li>
+          <div class="three columns">
+            <img src="/assets/hardware_page_logos/mbed_300.png" alt="mbed" />
+          </div>
+
+          <div class="nine columns">
+            <h2 class="heading-smallest">ARM mbed</h2>
+              <br>
+              <p>Develop powerful connected products on the industry-standard ARM architecture with mbed's native Xively support.
+              <br><a href="http://mbed.org/" id="js-ga-dev-hardware-mbed">Go to <strong>http://mbed.org</strong></a></p>
+          </div>
+        </li>
+        <li>
+          <div class="three columns">
+            <img src="/assets/hardware_page_logos/TST_300.png" alt="TST"/>
+          </div>
+
+          <div class="nine columns">
+            <h2 class="heading-smallest">TST</h2>
+              <p>The fast and simple TSmarT platform with native Xively support brings ethernet, WiFi or cellular monitoring to any IoT/M2M application.</p>
+              <a href="http://www.tst-sistemas.es/en/" id="js-ga-dev-hardware-tst">Go to <strong>https://tst-sistemas.es</strong></a>
+          </div>
+        </li>
+        <li>
+          <div class="three columns">
+            <img src="/assets/hardware_page_logos/Arduino_300.png" alt="Arduino"/>
+          </div>
+
+          <div class="nine columns">
+            <h2 class="heading-smallest">Arduino</h2>
+              <br>
+              <p>The popular prototyping platform and Xively make the perfect combination.
+              <br><a href="http://www.arduino.cc/" id="js-ga-dev-hardware-arduino">Go to <strong>http://www.arduino.cc</strong></a></p>
+          </div>
+        </li>
+
+        <li>
+          <div class="three columns">
+            <img src="/assets/hardware_page_logos/electric-imp_300.png" alt="electric_imp" />
+          </div>
+
+          <div class="nine columns">
+            <h2 class="heading-smallest">electric imp</h2>
+              <br>
+              <p>Connect to Xively and the web with a WiFi module the size of an SD card.
+              <br><a href="http://electricimp.com" id="js-ga-dev-hardware-electricimp">Go to <strong>http://electricimp.com</strong></a></p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </section> <!-- End of Partners -->
+
+</section>
+
+
+      </div>
+    </section>
+
+    <footer class="app-footer" role="contentinfo">
+  <div class="app-footer-inner row">
+    <section class="app-footer-links eight columns">
+    <ul class="block-grid four-up mobile-two-up">
+      <li class="footer-section">
+      <h3 class="footer-section-title">About Us</h3>
+      <ul class="no-bullet">
+        <li class="footer-accent-links"><a href="/login/">Login</a> / <a href="/get_started/">Get Started</a></li>
+        <li><a href="/whats_xively/">Platform</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/partners/">Partners</a></li>
+        <li><a href="/company_info/">Company info</a></li>
+        <li><a href="/jobs/">Jobs</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Support</h3>
+      <ul class="no-bullet">
+        <li><a href="/dev/docs/api/">API Documentation</a></li>
+        <li><a href="/dev/libraries/">Libraries</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/dev/help/">Help</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Learn</h3>
+      <ul class="no-bullet">
+        <li><a href="/showcase/">Showcase</a></li>
+        <li><a href="http://blog.xively.com">Blog</a></li>
+        <li><a href="/dev/tutorials/">Tutorials</a></li>
+        <li><a href="/dev/hardware/">Hardware</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Media</h3>
+      <ul class="no-bullet">
+        <li><a href="/news/">News</a></li>
+        <li><a href="/press_releases/">Press Releases</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/awards/">Awards</a></li>
+        <li class="footer-social-icons">
+        <a href="https://www.facebook.com/Xively" class="facebook"><i class="icon-facebook"></i></a>
+        <a href="http://twitter.com/XivelyIOT" target="_blank" class="twitter"><i class="icon-twitter"></i></a>
+        <a href="https://plus.google.com/u/0/107384947738095536561" class="google-plus"><i class="icon-google-plus"></i></a>
+        </li>
+      </ul>
+      </li>
+    </ul>
+    </section>
+
+    <section class="app-footer-copyright four columns">
+    <h1 class="footer-logo">
+      <a href="/">Xively</a>
+    </h1>
+    <p class="footer-company">Copyright &copy; 2003-2013 LogMeIn, Inc. <br>All rights reserved.</p>
+    <p class="footer-terms"><a href="https://secure.logmein.com/policies/privacy.aspx">Legal Info</a></p>
+    <a class="footer-contact" href="/contact_us/">Contact Us <i class="button-icon icon-arrow-right"></i></a>
+    </section>
+  </div>
+</footer>
+
+
+  </div>
+
+  <script type="text/javascript" src="/assets/app.js"></script>
+  <script type="text/javascript">
+  window._gaq = [['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],['_setAccount','UA-20796726-3'],['_trackPageview'],['_trackPageLoadTime'], ['_setDomainName', 'xively.com'],['_setAllowHash', false]];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'
+  });
+</script>
+
+</body>
+</html>

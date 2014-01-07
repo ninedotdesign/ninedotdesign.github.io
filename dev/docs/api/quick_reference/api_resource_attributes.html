@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 ielt10 ielt9 ielt8 ielt7 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 ielt10 ielt9 ielt8 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ielt10 ielt9 lt-ie9 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ielt10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js iegt9" lang="en"> <!--<![endif]-->
+
+<head>
+  <script src="//cdn.optimizely.com/js/255025209.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#0085cf">
+  <meta name="application-name" content="Xively">
+  <meta name="description" content="Xively brings meaning to the Internet of Things through cloud based services that simplify and accelerate the creation, deployment, scaling and management of compelling products and solutions.">
+  <meta name="keywords" content="IoT, Internet of Things, cloud, public cloud, smart systems, IoTWorks, iobridge, cisco, devices, iOS, Apple, Microsoft, paas, platform as a service, open, arm, mbed, ti, raspberry pi, arduino">
+
+  <title>API Resource Attributes - Xively</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/app.css">
+
+  <!--[if gt IE 8]><!-->
+  <script type="text/javascript" src="//use.typekit.net/cwq5rkg.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!--<![endif]-->
+
+  <!--[if lt IE 9]> 
+  <script type="text/javascript" src="//use.typekit.net/ruq4lqv.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript" src="/assets/cosmui/ui.respond.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="/assets/zurbfoundation/modernizr.foundation.js"></script>
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="search-bar">
+  <div class="search-bar-inner">
+		<div class="search-bar-right">
+			<a class="search-bar-login" href="/login/">Login</a>
+			<form class="module-search-form" action="/search" method="get">
+			    <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search Xively.com">
+			    <button type="submit" for="header-search" class="module-search-label icon-search" ></button>
+			</form>
+		</div>
+  </div>
+</div>
+
+<header class="app-header contain-to-grid" role="banner">
+  <!--# block name="logged_out_header" -->
+    <div class="headermenu">
+  <nav class="app-header-bar top-bar clearfix" role="navigation">
+    <ul class="app-header-branding">
+      <li class="app-header-logo name">
+        <h1 class="app-header-logo-heading"> <a class="app-header-logo-link" href="/">Xively</a> </h1>
+      </li>
+      <li class="app-header-toggle toggle-topbar"> <a href="#"> <span class="app-header-toggle-text">Menu</span> <i class="icon-menu"></i> </a> </li>
+    </ul>
+    <section class="app-header-content"> 
+      
+      <!-- Left Nav Section --> 
+      
+      <ul class="left">
+
+
+
+  <li class="app-header-platform  has-dropdown">
+    <a href="/whats_xively/">Platform</a>
+    <ul class="dropdown">
+      <li><a href="/whats_xively/">What is Xively?</a></li>
+      <li><a href="/using_xively/">How it Works</a></li>
+      <li><a href="/testdrive/">Test Drive</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/get_started/">Get Started</a></li>
+    </ul>
+  </li>
+
+  
+  <li class="app-header-consulting">
+  
+    <a href="/consulting/">Services</a>
+  </li>
+
+  <li class="app-header-ecosystem  has-dropdown">
+    <a href="/showcase/">Ecosystem</a>
+    <ul class="dropdown">
+      <li><a href="/showcase/">Customers</a></li>
+      <li><a href="/partners/">Partner Gallery</a></li>
+      <li><a href="/partners/join/">Join the Network</a></li>
+    </ul>
+  </li>
+  <li class="app-header-newsevents  has-dropdown">
+    <a href="/news/">News & Events</a>
+    <ul class="dropdown">
+      <li><a href="/news/">In the News</a></li>
+      <li><a href="/press_releases/">Press Releases</a></li>
+      <li><a href="/events/">Events</a></li>
+      <li><a href="/awards/">Awards</a></li>
+    </ul>
+  </li>
+	<li class="has-dropdown active subnav-active">
+	  <a href="/dev/">Dev Center</a>
+	  <ul class="dropdown">
+	    <li><a href="/dev/tutorials/">Tutorials</a></li>
+	    <li><a href="/dev/libraries/">Libraries</a></li>
+	    <li><a href="/dev/hardware/">Hardware</a></li>
+	    <li class="active"><a href="/dev/docs/api/">API Docs</a></li>
+	    <li><a href="/dev/help/">Help</a></li>
+	  </ul>
+	</li>
+
+
+
+</ul>
+ 
+      
+      <!-- Right Nav Section -->
+      <ul class="right">
+        
+<li class="app-header-search has-dropdown">
+  <a href="/search/"><i class="icon-search"></i></a>
+  <ul class="dropdown">
+    <li class="module-search">
+      <h4>Search</h4>
+      <form class="module-search-form" action="/search" method="get">
+        <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search">
+        <label for="header-search" class="module-search-label icon-search"></label>
+      </form>
+    </li>
+  </ul>
+</li>
+
+<li class="app-header-search-small module-search">
+  <form class="module-search-form" action="/search" method="get">
+    <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search">
+    <label for="header-search" class="module-search-label icon-search"></label>
+  </form>
+</li>
+
+        <li class="app-header-login "> <a href="/login/">Login</a> </li>
+        <li class="app-header-signup "> <a class="button orange" href="/get_started/">Get Started</a> </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+
+  <!--# endblock -->
+  <!--# include virtual="/dynamic_partials/header?page_type=dev&subsection=api" stub="logged_out_header" -->
+  
+<nav class="subnav-bar">
+  <div class="contain">
+    <ul class="nav-bar clearfix">
+      
+
+
+       <li><a href="/dev/tutorials/">Tutorials</a>
+      </li>
+      <li><a href="/dev/libraries/">Libraries</a>
+      </li>
+      <li><a href="/dev/hardware/">Hardware</a>
+      </li>
+      <li class="active"><a href="/dev/docs/api/">API Docs</a>
+      </li>
+      <li><a href="/dev/help/">Help</a>
+      </li>
+      
+      <div class="social"> <a href="http://blog.xively.com" class="bloglink">BLOG</a>
+        <div class="social-box"></div>
+        <div class="clearfix"></div>
+      </div>
+    </ul>
+  </div>
+</nav>
+<div class="social-drawer">
+  <div> <a href="https://plus.google.com/+xively" target="_blank" class="btng"><img src="/assets/gplus.png" alt="Google+" /></a>
+    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FXively&amp;width=170&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=false&amp;appId=263181137044005" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+    <iframe allowtransparency="true" frameborder="0" scrolling="no" data-show-screen-name="false"
+src="//platform.twitter.com/widgets/follow_button.html?screen_name=XivelyIOT"
+style="width:210px; height:20px; margin-left:20px;" class="twitbox"></iframe>
+    <a class="email" href="mailto:?subject=Xively&body=https://xively.com"><img src="/assets/mail.png" alt="email us" /></a> </div>
+  <!-- social drawer -->
+  <div class="clearfix"></div>
+</div>
+
+
+</header>
+
+
+    <section class="app-main" role="main">
+      <div class="app-main-inner">
+
+        <article class="page-apidoc">
+  <div class="row">
+    <div class="apidoc-column-sidebar four columns">
+
+      <aside class="apidoc-sidebar">
+        <h2 class="apidoc-sidebar-title">API Docs</h2>
+
+        <!-- Level 1 nav -->
+        <ul class="apidoc-sidebar-level-1">
+        
+          <li class="apidoc-sidebar-section">
+            
+            
+              
+            
+
+            <a class="apidoc-sidebar-link " href="/dev/docs/api/">Xively REST API</a>
+            
+            <!-- Level 2 nav -->
+            
+              <ul class="apidoc-sidebar-level-2">
+              
+                <li class="apidoc-sidebar-section has-toggle">
+                  
+                  
+                    
+                  
+
+                  <a class="apidoc-sidebar-link " href="/dev/docs/api/quick_reference/">API Quick Reference</a>
+
+                  <a href="/" class="apidoc-sidebar-toggle toggle-active" data-ui-toggle data-target="next"><span></span></a>
+
+                  <!-- Level 3 nav -->
+                  
+                    <ul class="apidoc-sidebar-level-3 active">
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/quick_reference/api_resources/">API Resources</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/quick_reference/api_resource_attributes/">API Resource Attributes</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/quick_reference/historical_data/">Historical Data</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/quick_reference/search_feeds/">Search Feeds</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                    </ul>
+                  
+
+                </li>
+              
+                <li class="apidoc-sidebar-section has-toggle">
+                  
+                  
+                    
+                  
+
+                  <a class="apidoc-sidebar-link " href="/dev/docs/api/data/">Reading & Writing Data</a>
+
+                  <a href="/" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                  <!-- Level 3 nav -->
+                  
+                    <ul class="apidoc-sidebar-level-3 ">
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/data/create/">Create</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section has-toggle">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/data/read/">Read</a>
+
+                        <a href="#" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                        <!-- Level 4 nav -->
+                        
+                          <ul class="apidoc-sidebar-level-4 ">
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/read/single_datastream/">Single Datastream</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/read/single_feed/">Single Feed</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/read/all_feeds/">All Feeds</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                          </ul>
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section has-toggle">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/data/write/">Write</a>
+
+                        <a href="#" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                        <!-- Level 4 nav -->
+                        
+                          <ul class="apidoc-sidebar-level-4 ">
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/write/multiple_datapoints_to_multiple_data_streams/">Write Multiple Datapoints to Each Datastream</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/write/multiple_datapoints_to_single_datastream/">Write Multiple Datapoints to Single Datastream</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/write/single_datapoint_to_a_single_datastream/">Write a Single Datapoint to a Single Datastream</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/write/single_datapoint_to_each_datastream/">Write a Single Datapoint to Each Datastream</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                          </ul>
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section has-toggle">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/data/delete/">Delete</a>
+
+                        <a href="#" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                        <!-- Level 4 nav -->
+                        
+                          <ul class="apidoc-sidebar-level-4 ">
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/delete/delete_datapoint/">Delete Datapoint</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/delete/delete_datastream/">Delete Datastream</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/data/delete/delete_multiple_datapoints/">Delete Multiple Datapoints</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                          </ul>
+                        
+
+                      </li>
+                    
+                    </ul>
+                  
+
+                </li>
+              
+                <li class="apidoc-sidebar-section has-toggle">
+                  
+                  
+                    
+                  
+
+                  <a class="apidoc-sidebar-link " href="/dev/docs/api/metadata/">Reading & Writing Metadata</a>
+
+                  <a href="/" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                  <!-- Level 3 nav -->
+                  
+                    <ul class="apidoc-sidebar-level-3 ">
+                    
+                      <li class="apidoc-sidebar-section has-toggle">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/metadata/triggers/">Triggers</a>
+
+                        <a href="#" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                        <!-- Level 4 nav -->
+                        
+                          <ul class="apidoc-sidebar-level-4 ">
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/metadata/triggers/create_trigger/">Create Trigger</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/metadata/triggers/read_trigger/">Read Trigger</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/metadata/triggers/update_trigger/">Update Trigger</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/metadata/triggers/delete_trigger/">Delete Trigger</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/metadata/triggers/list_all_triggers/">List All Triggers</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                          </ul>
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/metadata/tags/">Tags</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/metadata/waypoints/">Locations & Waypoints</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                    </ul>
+                  
+
+                </li>
+              
+                <li class="apidoc-sidebar-section has-toggle">
+                  
+                  
+                    
+                  
+
+                  <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/">Product Management</a>
+
+                  <a href="/" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                  <!-- Level 3 nav -->
+                  
+                    <ul class="apidoc-sidebar-level-3 ">
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/provisioning/">Provisioning</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section has-toggle">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/products/">Products</a>
+
+                        <a href="#" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                        <!-- Level 4 nav -->
+                        
+                          <ul class="apidoc-sidebar-level-4 ">
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/products/create_product/">Create a Product</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/products/read_product/">Read a Product</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/products/update_product/">Update a Product</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/products/delete_product/">Delete a Product</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/products/list_all_products/">List All Products</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                          </ul>
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section has-toggle">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/devices/">Devices</a>
+
+                        <a href="#" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                        <!-- Level 4 nav -->
+                        
+                          <ul class="apidoc-sidebar-level-4 ">
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/devices/activate_device/">Activate a Device</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/devices/create_device/">Create a Device</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/devices/read_device/">Read a Device</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/devices/update_device/">Update a Device</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/devices/delete_device/">Delete a Device</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/product_management/devices/list_all_devices/">List All Devices</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                          </ul>
+                        
+
+                      </li>
+                    
+                    </ul>
+                  
+
+                </li>
+              
+                <li class="apidoc-sidebar-section has-toggle">
+                  
+                  
+                    
+                  
+
+                  <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/">Communicating with Xively</a>
+
+                  <a href="/" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                  <!-- Level 3 nav -->
+                  
+                    <ul class="apidoc-sidebar-level-3 ">
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/rest/">REST</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section has-toggle">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/http/">Using HTTP</a>
+
+                        <a href="#" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                        <!-- Level 4 nav -->
+                        
+                          <ul class="apidoc-sidebar-level-4 ">
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/http/http_status_codes/">HTTP Status Codes</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/http/http_headers/">HTTP Headers</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/http/http_compression/">HTTP Compression</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                          </ul>
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section has-toggle">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/sockets/">Using Sockets</a>
+
+                        <a href="#" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                        <!-- Level 4 nav -->
+                        
+                          <ul class="apidoc-sidebar-level-4 ">
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/sockets/http_methods/">HTTP Request Methods</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/sockets/subscribe/">Subscribe</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/sockets/unsubscribe/">Unsubscribe</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                          </ul>
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/mqtts/">Using MQTT</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/time_zones/">Time Zones</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/versions/">Versions</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/data_formats/">Data Formats</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/communicating/usage_limits/">Usage Limits</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                    </ul>
+                  
+
+                </li>
+              
+                <li class="apidoc-sidebar-section has-toggle">
+                  
+                  
+                    
+                  
+
+                  <a class="apidoc-sidebar-link " href="/dev/docs/api/security/">Security</a>
+
+                  <a href="/" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                  <!-- Level 3 nav -->
+                  
+                    <ul class="apidoc-sidebar-level-3 ">
+                    
+                      <li class="apidoc-sidebar-section has-toggle">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/security/keys/">API Keys</a>
+
+                        <a href="#" class="apidoc-sidebar-toggle " data-ui-toggle data-target="next"><span></span></a>
+
+                        <!-- Level 4 nav -->
+                        
+                          <ul class="apidoc-sidebar-level-4 ">
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/security/keys/create_key/">Create a Key</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/security/keys/read_key/">Read a Key</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/security/keys/update_an_api_key/">Update a Key</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/security/keys/delete_key/">Delete a Key</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/security/keys/list_all_keys/">List All Keys</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                            <li class="apidoc-sidebar-section">
+                              
+                              
+                                
+                              
+
+                              <a class="apidoc-sidebar-link " href="/dev/docs/api/security/keys/regenerate_an_api_key/">Regenerate a Key</a>
+
+                              <!-- Level 5 nav -->
+                              
+
+                            </li>
+                          
+                          </ul>
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/security/public_and_private_feeds/">Public and Private Feeds</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/security/security/">HTTPS</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                      <li class="apidoc-sidebar-section ">
+                        
+                        
+                          
+                        
+
+                        <a class="apidoc-sidebar-link " href="/dev/docs/api/security/oauth/">OAuth</a>
+
+                        
+
+                        <!-- Level 4 nav -->
+                        
+
+                      </li>
+                    
+                    </ul>
+                  
+
+                </li>
+              
+                <li class="apidoc-sidebar-section ">
+                  
+                  
+                    
+                  
+
+                  <a class="apidoc-sidebar-link " href="/dev/docs/api/api_terms_and_conditions/">API Terms and Conditions</a>
+
+                  
+
+                  <!-- Level 3 nav -->
+                  
+
+                </li>
+              
+              </ul>
+            
+
+          </li>
+        
+          <li class="apidoc-sidebar-section">
+            
+            
+              
+            
+
+            <a class="apidoc-sidebar-link " href="/dev/docs/transitioning/">Transitioning to Xively</a>
+            
+            <!-- Level 2 nav -->
+            
+
+          </li>
+        
+          <li class="apidoc-sidebar-section">
+            
+            
+              
+            
+
+            <a class="apidoc-sidebar-link " href="/dev/docs/glossary/">Xively Glossary of Terms</a>
+            
+            <!-- Level 2 nav -->
+            
+
+          </li>
+        
+        </ul>
+      </aside>      
+
+    </div>
+    <div class="apidoc-column-right eight columns">
+      <header class="apidoc-header">
+        <h1 class="apidoc-header-heading heading-big">API Resource Attributes</h1>
+        
+      </header>
+
+      <div class="apidoc-content">
+
+        <p>The tables below outline the attributes for each of the Xively API resources: </p>
+
+<ul>
+  <li><a href="#product">Products</a></li>
+  <li><a href="#device">Devices</a></li>
+  <li><a href="#feed">Feeds</a></li>
+  <li>
+    <p><a href="#datastream">Datastreams</a></p>
+  </li>
+  <li><a href="#location">Locations</a></li>
+  <li><a href="#waypoint">Waypoints</a></li>
+  <li><a href="#trigger">Triggers</a></li>
+  <li><a href="#key">Keys</a></li>
+</ul>
+
+<p><span id="feed"></span></p>
+
+<h2 id="feeds">Feeds</h2>
+<p>A Feed contains one or more Datastreams and a Datastream contains one or more Datapoints. Because of this, you can use the Feed API to access the metadata of the Feed, the metadata of each Datastream in the Feed and the Datapoints in each Datastream.</p>
+
+<p>The following table lists the <strong>feed</strong> resource attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required in an update?</th>
+      <th>Can be directly set?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ID</td>
+      <td>The ID of the Feed.</td>
+      <td>No</td>
+      <td>No. Set automatically.</td>
+    </tr>
+    <tr>
+      <td>Title</td>
+      <td>A descriptive name for the Feed.</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Private</td>
+      <td>Whether or not the Feed is private to the creator of the Feed. If “true”, the Feed is private, if “false”, the Feed is public (CC0 1.0). For more information, see <a href="/dev/docs/api/security/public_and_private_feeds/">Public and Private Feeds</a>.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Tags</td>
+      <td>Tagged metadata about the Feed (characters ‘ “ and commas will be stripped out).</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>A description of the Feed.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Feed</td>
+      <td>The URL of the Feed.</td>
+      <td>No</td>
+      <td>No. Set automatically.</td>
+    </tr>
+    <tr>
+      <td>Auto Feed URL</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>Value is “live” if the Feed has been updated in the last 15 minutes otherwise it is considered “frozen”.</td>
+      <td>No</td>
+      <td>No. Set automatically</td>
+    </tr>
+    <tr>
+      <td>Updated</td>
+      <td>The time at which this Feed was last updated.</td>
+      <td>No</td>
+      <td>No. Set automatically when any of the metadata changes.</td>
+    </tr>
+    <tr>
+      <td>Created</td>
+      <td>The date the Feed was created.</td>
+      <td>No</td>
+      <td>No. Set automatically.</td>
+    </tr>
+    <tr>
+      <td>Creator</td>
+      <td>A URL referencing the creator of the Feed.</td>
+      <td>No</td>
+      <td>Yes. Set automatically.</td>
+    </tr>
+    <tr>
+      <td>Version</td>
+      <td>Version of the data format Feed returned.</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Datastreams</td>
+      <td>A collection of the Datastreams in this Feed. See the following table for specific attributes</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>see table below for a list of the Feed resource’s location attributes</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Website</td>
+      <td>The URL of a website which is relevant to this Feed e.g. home page.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Icon</td>
+      <td>The URL of an icon which is relevant to this Feed.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>User Login</td>
+      <td>The user who owns the Feed. Visible if you specify show_user=true in the HTTP request.</td>
+      <td>No</td>
+      <td>No. Set automatically</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span id="datastream"></span></p>
+
+<h2 id="datastreams">Datastreams</h2>
+<p>The following table lists the Feed resource’s <strong>datastream</strong> attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required in an update?</th>
+      <th>Can be directly set?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Stream ID</td>
+      <td>The ID of the Datastream.</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Updated</td>
+      <td>The time at which this Datastream was last updated.</td>
+      <td>No</td>
+      <td>No. Set automatically.</td>
+    </tr>
+    <tr>
+      <td>Tags</td>
+      <td>Tagged metadata about the Datastream (characters ‘ “ and commas will be stripped out) will be stripped out).</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Units</td>
+      <td>The units of the Datastream, for example ‘Celsius’.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Unit type</td>
+      <td>The type of the unit, for example ‘basicSI’.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Unit symbol</td>
+      <td>The symbol of the unit, for example ‘C’.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Min Value</td>
+      <td>The minimum value since the last reset.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Max Value</td>
+      <td>The maximum value since the last reset.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Current Value</td>
+      <td>The current value of the Datastream.</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Datapoints</td>
+      <td>A collection of time-stamped values.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span id="location"></span></p>
+
+<h2 id="locations">Locations</h2>
+<p>The following table lists the Feed resource’s <strong>location</strong> attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required in an update?</th>
+      <th>Can be directly set?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>disposition</td>
+      <td>Whether the “location” is mobile or fixed.</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>ele</td>
+      <td>The elevation of the device.</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>The name of the device.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>lat</td>
+      <td>The latitude of the device.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>exposure</td>
+      <td>Whether the location is indoors or outdoors.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>lon</td>
+      <td>The longitude of the device.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>domain</td>
+      <td>The domain of the location, i.e. physical or virtual.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>waypoints</td>
+      <td>A list of locations for a mobile Feed. You cannot create, edit, or delete location waypoints. Xively creates a new location waypoint automatically in real time when the elevation, latitude, or longitude of a device changes. Location waypoints cannot be created using buffered historical data.</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span id="waypoint"></span></p>
+
+<h2 id="waypoints">Waypoints</h2>
+<p>The following table lists the Feed resource’s <strong>waypoint</strong> attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required in an update?</th>
+      <th>Can be directly set?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>at</td>
+      <td>The time when the device changed location. The time is by default the current server time, unless you specify a value for the “Updated” attribute of the Feed.</td>
+      <td>Yes</td>
+      <td>No. Set automatically.</td>
+    </tr>
+    <tr>
+      <td>lat</td>
+      <td>The latitude of the device.</td>
+      <td>N/A</td>
+      <td>No. Set automatically.</td>
+    </tr>
+    <tr>
+      <td>long</td>
+      <td>The longitude of the device.</td>
+      <td>N/A</td>
+      <td>No. Set automatically.</td>
+    </tr>
+    <tr>
+      <td>ele</td>
+      <td>The elevation of the device.</td>
+      <td>N/A</td>
+      <td>No. Set automatically.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span id="trigger"></span></p>
+
+<h2 id="triggers">Triggers</h2>
+<p>The following table lists the <strong>trigger</strong> resource attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required in an update?</th>
+      <th>Can be directly set?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Url</td>
+      <td>the URL to be POSTed to when the trigger threshold is met</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Trigger_type</td>
+      <td>the type of evaluation to be done by the trigger. See the trigger_type table below</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Threshold_value</td>
+      <td>the threshold value to be evaluated against for trigger_type for the current value of the target Datastream</td>
+      <td>Not required for trigger_type =change, frozen and live. Required for all others.</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Environment_id</td>
+      <td>Feed ID for the Feed that contains the Datastream to be monitored</td>
+      <td>Yes, not modifiable once set</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Stream_id</td>
+      <td>string name of the Datastream to be monitored</td>
+      <td>Yes, not modifiable once set</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>“trigger_type” values</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>gt</td>
+      <td>Greater than</td>
+    </tr>
+    <tr>
+      <td>gte</td>
+      <td>Greater than or equal to</td>
+    </tr>
+    <tr>
+      <td>lt</td>
+      <td>Less than</td>
+    </tr>
+    <tr>
+      <td>lte</td>
+      <td>Less than or equal to</td>
+    </tr>
+    <tr>
+      <td>eq</td>
+      <td>Equal to</td>
+    </tr>
+    <tr>
+      <td>change</td>
+      <td>Any change</td>
+    </tr>
+    <tr>
+      <td>frozen</td>
+      <td>No updates for 15 minutes</td>
+    </tr>
+    <tr>
+      <td>live</td>
+      <td>Updated again after being frozen</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span id="product"></span></p>
+
+<h2 id="products">Products</h2>
+
+<p>The following table lists the <strong>product</strong> resource attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required?</th>
+      <th>Settable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>The name of the product</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>The description of the product</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>product_id</td>
+      <td>The user-visible id of the product (i.e. the id used in the URL for API requests)</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>secret</td>
+      <td>The product secret that all devices belonging to this product will use to generate activation codes. The product secret is a hex string, however it should be interpreted as binary bytes, not an ASCII string, to save space on resource constrained device. When you are ready to mass produce your prototype product, the manufacturer programs the product secret into the firmware of each device. The manufacturer must safeguard the product secret and the product secret must not be transmitted anywhere in the normal operation of the device.</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span id="device"></span></p>
+
+<h2 id="devices">Devices</h2>
+<p>The following table lists the <strong>device</strong> resource attributes:</p>
+
+<p>A device has the following attributes, of which, only the serial number is settable:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required?</th>
+      <th>Settable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>serial</td>
+      <td>The serial number of the device. A serial number is a unique ID and can be any arbitrary string composed of alphanumeric characters and the addition symbol (+), subtraction symbol (-), underscore (_), colon (:), and comma (,). This serial number can be programmed into the device during the manufacturing process, or it can be the MAC address if the device has an Ethernet or WiFi connection. If possible, the manufacturer should use non-consecutive serial numbers so that if your product secret is discovered, it is difficult to guess the serial number of other users. The serial number must be accessible to the activation code running in firmware.</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>activated_at</td>
+      <td>The date at which the device was activated in ISO8601 format. This attribute is set by Xively when the activation code is received from the device.</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>created_at</td>
+      <td>The date at which the device was created in ISO8601 format. This attribute is set by Xively when it creates the device in the database.</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Feed_id</td>
+      <td>The id for the Feed that was created for this device.</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>api_key</td>
+      <td>The API key for the Feed that was created for this device.</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>activation_code</td>
+      <td>When a device with Internet connectivity powers on (“wakes up”), the device submits an activation code to Xively. When Xively receives the activation code, it sets the activated_at attribute and returns the Feed_id and api_key attributes to the device, completing the provisioning process so that the device can send data to Xively.</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span id="key"></span></p>
+
+<h2 id="keys">Keys</h2>
+<p>The following table lists the <strong>key</strong> resource attributes:</p>
+
+<p>The key is the top level data structure. A key contains the following attributes, some of which are required:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required?</th>
+      <th>User-settable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>api_key</td>
+      <td>The actual api key token to be used by the client application</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>A label by which the key can be referenced</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>expires_at</td>
+      <td>Expiration date for the key after which it won’t work</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>private_access</td>
+      <td>Flag that indicates whether this key can access private resources belonging to the user</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>permissions</td>
+      <td>Collection of Permission objects controlling the access level</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the <strong>key permission</strong> attributes:</p>
+
+<p>At least one Permission object is required when creating a key, but more than one are permitted for more complex keys. A Permission object contains the following attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required?</th>
+      <th>User-settable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>access_methods</td>
+      <td>An array indicating what type of access the key has. Contains one or more of the following: get, put, post, delete.</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>source_ip</td>
+      <td>Restricts access to requests that originate from this IP address.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>referer</td>
+      <td>The referer<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">sic</a> domain. If you specify the referer domain, the key can only be embedded in a web page with the matching URL. Subdomains are treated as different domains</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>minimum_interval</td>
+      <td>Creates a key that can only request data with a certain resolution. For example, a key could be created that, when embedded in a web page, allows access only to values collected over an interval of one day. The same key could not be used to access full resolution data.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>Optional label for identifying the permission set.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>resources</td>
+      <td>Optional collection of Resource objects. Resource objects restrict access to specific Feeds or Datastreams.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the <strong>key resource</strong> attributes:</p>
+
+<p>Resources can optionally be added to Permission object to restrict access to just the specified Feed or Datastream. A Resource object contains the following attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Required?</th>
+      <th>User-settable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Feed_id</td>
+      <td>Reference to a specific Feed id.</td>
+      <td>Yes if a Datastream is also specified, No otherwise</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Datastream_id</td>
+      <td>Reference to a specific Datastream id within a Feed. If specified then the Feed id must also be specified.</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+      </div>
+    </section>
+
+    <footer class="app-footer" role="contentinfo">
+  <div class="app-footer-inner row">
+    <section class="app-footer-links eight columns">
+    <ul class="block-grid four-up mobile-two-up">
+      <li class="footer-section">
+      <h3 class="footer-section-title">About Us</h3>
+      <ul class="no-bullet">
+        <li class="footer-accent-links"><a href="/login/">Login</a> / <a href="/get_started/">Get Started</a></li>
+        <li><a href="/whats_xively/">Platform</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/partners/">Partners</a></li>
+        <li><a href="/company_info/">Company info</a></li>
+        <li><a href="/jobs/">Jobs</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Support</h3>
+      <ul class="no-bullet">
+        <li><a href="/dev/docs/api/">API Documentation</a></li>
+        <li><a href="/dev/libraries/">Libraries</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/dev/help/">Help</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Learn</h3>
+      <ul class="no-bullet">
+        <li><a href="/showcase/">Showcase</a></li>
+        <li><a href="http://blog.xively.com">Blog</a></li>
+        <li><a href="/dev/tutorials/">Tutorials</a></li>
+        <li><a href="/dev/hardware/">Hardware</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Media</h3>
+      <ul class="no-bullet">
+        <li><a href="/news/">News</a></li>
+        <li><a href="/press_releases/">Press Releases</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/awards/">Awards</a></li>
+        <li class="footer-social-icons">
+        <a href="https://www.facebook.com/Xively" class="facebook"><i class="icon-facebook"></i></a>
+        <a href="http://twitter.com/XivelyIOT" target="_blank" class="twitter"><i class="icon-twitter"></i></a>
+        <a href="https://plus.google.com/u/0/107384947738095536561" class="google-plus"><i class="icon-google-plus"></i></a>
+        </li>
+      </ul>
+      </li>
+    </ul>
+    </section>
+
+    <section class="app-footer-copyright four columns">
+    <h1 class="footer-logo">
+      <a href="/">Xively</a>
+    </h1>
+    <p class="footer-company">Copyright &copy; 2003-2013 LogMeIn, Inc. <br>All rights reserved.</p>
+    <p class="footer-terms"><a href="https://secure.logmein.com/policies/privacy.aspx">Legal Info</a></p>
+    <a class="footer-contact" href="/contact_us/">Contact Us <i class="button-icon icon-arrow-right"></i></a>
+    </section>
+  </div>
+</footer>
+
+
+  </div>
+
+  <script type="text/javascript" src="/assets/app.js"></script>
+  <script type="text/javascript">
+  window._gaq = [['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],['_setAccount','UA-20796726-3'],['_trackPageview'],['_trackPageLoadTime'], ['_setDomainName', 'xively.com'],['_setAllowHash', false]];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'
+  });
+</script>
+
+</body>
+</html>

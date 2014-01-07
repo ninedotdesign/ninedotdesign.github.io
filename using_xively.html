@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 ielt10 ielt9 ielt8 ielt7 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 ielt10 ielt9 ielt8 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ielt10 ielt9 lt-ie9 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ielt10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js iegt9" lang="en"> <!--<![endif]-->
+
+<head>
+  <script src="//cdn.optimizely.com/js/255025209.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#0085cf">
+  <meta name="application-name" content="Xively">
+  <meta name="description" content="Xively brings meaning to the Internet of Things through cloud based services that simplify and accelerate the creation, deployment, scaling and management of compelling products and solutions.">
+  <meta name="keywords" content="IoT, Internet of Things, cloud, public cloud, smart systems, IoTWorks, iobridge, cisco, devices, iOS, Apple, Microsoft, paas, platform as a service, open, arm, mbed, ti, raspberry pi, arduino">
+
+  <title>Using Xively - Xively</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/app.css">
+
+  <!--[if gt IE 8]><!-->
+  <script type="text/javascript" src="//use.typekit.net/cwq5rkg.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!--<![endif]-->
+
+  <!--[if lt IE 9]> 
+  <script type="text/javascript" src="//use.typekit.net/ruq4lqv.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript" src="/assets/cosmui/ui.respond.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="/assets/zurbfoundation/modernizr.foundation.js"></script>
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="search-bar">
+  <div class="search-bar-inner">
+		<div class="search-bar-right">
+			<a class="search-bar-login" href="/login/">Login</a>
+			<form class="module-search-form" action="/search" method="get">
+			    <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search Xively.com">
+			    <button type="submit" for="header-search" class="module-search-label icon-search" ></button>
+			</form>
+		</div>
+  </div>
+</div>
+
+<header class="app-header contain-to-grid" role="banner">
+  <!--# block name="logged_out_header" -->
+    <div class="headermenu">
+  <nav class="app-header-bar top-bar clearfix" role="navigation">
+    <ul class="app-header-branding">
+      <li class="app-header-logo name">
+        <h1 class="app-header-logo-heading"> <a class="app-header-logo-link" href="/">Xively</a> </h1>
+      </li>
+      <li class="app-header-toggle toggle-topbar"> <a href="#"> <span class="app-header-toggle-text">Menu</span> <i class="icon-menu"></i> </a> </li>
+    </ul>
+    <section class="app-header-content"> 
+      
+      <!-- Left Nav Section --> 
+      
+      <ul class="left">
+
+
+
+  <li class="app-header-platform active has-dropdown">
+    <a href="/whats_xively/">Platform</a>
+    <ul class="dropdown">
+      <li><a href="/whats_xively/">What is Xively?</a></li>
+      <li class="active"><a href="/using_xively/">How it Works</a></li>
+      <li><a href="/testdrive/">Test Drive</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/get_started/">Get Started</a></li>
+    </ul>
+  </li>
+
+  
+  <li class="app-header-consulting">
+  
+    <a href="/consulting/">Services</a>
+  </li>
+
+  <li class="app-header-ecosystem  has-dropdown">
+    <a href="/showcase/">Ecosystem</a>
+    <ul class="dropdown">
+      <li><a href="/showcase/">Customers</a></li>
+      <li><a href="/partners/">Partner Gallery</a></li>
+      <li><a href="/partners/join/">Join the Network</a></li>
+    </ul>
+  </li>
+  <li class="app-header-newsevents  has-dropdown">
+    <a href="/news/">News & Events</a>
+    <ul class="dropdown">
+      <li><a href="/news/">In the News</a></li>
+      <li><a href="/press_releases/">Press Releases</a></li>
+      <li><a href="/events/">Events</a></li>
+      <li><a href="/awards/">Awards</a></li>
+    </ul>
+  </li>
+	<li class="has-dropdown ">
+	  <a href="/dev/">Dev Center</a>
+	  <ul class="dropdown">
+	    <li><a href="/dev/tutorials/">Tutorials</a></li>
+	    <li><a href="/dev/libraries/">Libraries</a></li>
+	    <li><a href="/dev/hardware/">Hardware</a></li>
+	    <li><a href="/dev/docs/api/">API Docs</a></li>
+	    <li><a href="/dev/help/">Help</a></li>
+	  </ul>
+	</li>
+
+
+
+</ul>
+ 
+      
+      <!-- Right Nav Section -->
+      <ul class="right">
+        
+<li class="app-header-search has-dropdown">
+  <a href="/search/"><i class="icon-search"></i></a>
+  <ul class="dropdown">
+    <li class="module-search">
+      <h4>Search</h4>
+      <form class="module-search-form" action="/search" method="get">
+        <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search">
+        <label for="header-search" class="module-search-label icon-search"></label>
+      </form>
+    </li>
+  </ul>
+</li>
+
+<li class="app-header-search-small module-search">
+  <form class="module-search-form" action="/search" method="get">
+    <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search">
+    <label for="header-search" class="module-search-label icon-search"></label>
+  </form>
+</li>
+
+        <li class="app-header-login "> <a href="/login/">Login</a> </li>
+        <li class="app-header-signup "> <a class="button orange" href="/get_started/">Get Started</a> </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+
+  <!--# endblock -->
+  <!--# include virtual="/dynamic_partials/header?page_type=platform&subsection=using_xively" stub="logged_out_header" -->
+  
+<nav class="subnav-bar">
+  <div class="contain">
+    <ul class="nav-bar clearfix">
+      
+
+
+       <li><a href="/whats_xively/">What is Xively?</a>
+      </li>
+      <li class="active"><a href="/using_xively/">How it Works</a>
+      </li>
+      <li><a href="/testdrive/">Test Drive</a>
+      </li>
+      <li><a href="/pricing/">Pricing</a>
+      </li>
+      <li><a href="/get_started/">Get Started</a>
+      </li>
+      
+      <div class="social"> <a href="http://blog.xively.com" class="bloglink">BLOG</a>
+        <div class="social-box"></div>
+        <div class="clearfix"></div>
+      </div>
+    </ul>
+  </div>
+</nav>
+<div class="social-drawer">
+  <div> <a href="https://plus.google.com/+xively" target="_blank" class="btng"><img src="/assets/gplus.png" alt="Google+" /></a>
+    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FXively&amp;width=170&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=false&amp;appId=263181137044005" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+    <iframe allowtransparency="true" frameborder="0" scrolling="no" data-show-screen-name="false"
+src="//platform.twitter.com/widgets/follow_button.html?screen_name=XivelyIOT"
+style="width:210px; height:20px; margin-left:20px;" class="twitbox"></iframe>
+    <a class="email" href="mailto:?subject=Xively&body=https://xively.com"><img src="/assets/mail.png" alt="email us" /></a> </div>
+  <!-- social drawer -->
+  <div class="clearfix"></div>
+</div>
+
+
+</header>
+
+
+    <section class="app-main" role="main">
+      <div class="app-main-inner">
+
+        <section class="row header-section-howitworks">
+    <div class="columns twelve">
+      <h1 class="key-message text-center">Build Compelling Connected Experiences</h1>
+      <h2 class="hero-tagline-small text-center">Develop connected products, build powerful experiences and deploy them at scale in a fraction of the time.</h2>
+    </div>
+</section>
+
+<section class="content-section content-section-howitworks">
+  <div class="row howitworks-intro">
+    <div class="ten columns centered">
+      <h3 class="heading-medium text-center">Create innovative connected objects using any software/hardware combination</h3>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="howitworks-connect columns seven push-five">
+      <p>We provide free, open and supported <a href="/dev/libraries/">libraries</a> along with tutorials and documentation to allow you to connect to Xively using the hardware you want and the languages you know. To make it even easier, we are certifying Xively Enabled&trade; hardware platforms every day from a variety of <a href="/dev/hardware/">vendors</a>. The libraries leverage our standards-based API over HTTP, Sockets and MQTT to make connecting to the Internet of Things simple, intuitive and fast.</p>
+      <p><strong>Never has it been so easy to take an idea to production.</strong></p>
+    </div>
+    <div class="columns five pull-seven connected-objects">
+
+      <div class="teaser clearfix">
+        <h3 class="heading-small font-light"><span aria-hidden="true" class="icon icon-checkmark font-blue"></span> <em>Hardware</em></h3>
+      </div>
+      <div class="teaser clearfix">
+        <h3 class="heading-small font-light"><span aria-hidden="true" class="icon icon-checkmark font-blue"></span> <em>Platform</em></h3>
+      </div>
+      <div class="teaser clearfix">
+        <h3 class="heading-small font-light"><span aria-hidden="true" class="icon icon-checkmark font-blue"></span> <em>Gateway</em></h3>
+      </div>
+      <div class="teaser clearfix">
+        <h3 class="heading-small font-light"><span aria-hidden="true" class="icon icon-checkmark font-blue"></span> <em>Object</em> <img src="/assets/howitworks/truck_blue.png" /></h3>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="howitworks-experiences row">
+    <div class="columns twelve">
+      <div class="row">
+        <div class="seven columns centered">
+          <h3 class="heading-medium text-center">Integrate your application and services with your connected object</h3>
+        </div>
+      </div>
+
+      <div class="howitworks-big-diagram row">
+        <div class="twelve columns">
+          <img src="/assets/howitworks/xively-howitworks-graphic.jpg" alt="Graphical representation of how Xively works with an app, Xively and customer CRM services communicating with each other">
+        </div>
+      </div>
+
+      <div class="howitworks-diagram row devices">
+
+        <div class="howitworks-diagram-object six push-three columns">
+          <div class="howitworks-diagram-graphic">
+            <img src="/assets/howitworks/truck_workbench_laptop.png" id="truck-workbench" />
+            <img class="hidden" src="/assets/howitworks/truck_mobile.jpg">
+          </div>
+
+          <div class="copy-wrapper">
+            <h3 class="heading-small">Design, build and debug your connected product with full control.</h3>
+            <p>Using the <strong>Xively Developer Workbench</strong>, you can get prototypes up and running quickly and easily.</p>
+            <p>Customizable device workspaces give you the power to configure and control channels, meta-data, fine-grain permissions, conditional triggers, time-series data archiving and interconnection with other devices, apps and services.</p>
+            <p>Monitor communication and functionality in real time using the visual debugger. Interactive activation lets you fine-tune provisioning.</p>
+          </div>
+        </div>
+
+        <div class="howitworks-diagram-app pull-six three columns mobile-two">
+          <div class="howitworks-diagram-graphic">
+            <img class="howitworks-diagram-phone" src="/assets/howitworks/xively-howitworks-graphic-phone.jpg" />
+          </div>
+
+          <h3 class="heading-small">Build connected apps for anything and everything</h3>
+          <p>Creating interactive apps for connected products has never been easier. Our <a href="/dev/libraries/">client libraries</a> including iOS, Android, JavaScript, and more, make it easy to leverage our API so that you can focus on your IoT innovation rather than infrastructure.</p>
+        </div>
+
+        <div class="howitworks-diagram-backend three columns mobile-two">
+          <div class="howitworks-diagram-graphic">
+            <img class="howitworks-diagram-phone" src="/assets/howitworks/xively-howitworks-graphic-crm.jpg" />
+          </div>
+
+          <h3 class="heading-small">Integrate and leverage  your own backend services</h3>
+          <p>User management, billing integration, deep integration with business systems is simple when you leverage our <a href="/dev/libraries/">server-side libraries</a> including Ruby, Python, Java and more, to integrate your new connected user experience with your existing backend systems. Take it a step further and tie in external services for analytics, reporting, and more...</p>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="nine columns centered text-center">
+          <h4 class="heading-small font-light">Test your ideas and designs in a controlled environment, refine your system and know that you are <strong>ready to deploy</strong>.</h4>
+          <p class="no-margin">See the Xively Developer Workbench in action, take the <a href="/testdrive/">Xively Test Drive</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="howitworks-pilot row">
+    <div class="columns ten centered text-center">
+      <h4 class="heading-medium">Pilot your system end-to-end</h4>
+      <div class="row">
+        <p class="columns ten centered">The code is tested, your prototypes refined. You have integrated objects, apps and services into a connected product. Your vision is now reality. With everything working, it’s time to get your product manufactured and test the production version. The deployment tools in the Xively Workbench allow you to simply create batches of products small or large so that you can fully test your <br/>production-ready system.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="howitworks-scale row">
+    <div class="columns ten centered text-center">
+      <h4 class="heading-medium">Scale When Needed</h4>
+      <div class="row">
+        <p class="columns ten centered">Now its time to scale. Create batches of products dynamically to match production. Xively will wait to hear each and every device come online for the first time and when they do, our provisioning engine will recognize them, secure the connection, and give you full control. Our scalable infrastructure ensures that your connected products deliver reliable, secure and compelling experience. Before you know it, your products are deployed and connected around the world. <br><strong>Never has it been so easy to take an idea to production</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="howitworks-scale row">
+    <div class="twelve columns">
+      <img class="howitworks-scale-trucks" src="/assets/howitworks/xively-howitworks-scale.png" />
+
+      <div class="howitworks-scale-right row">
+        <div class="howitworks-scale-copy six push-six columns">
+          <h4 class="heading-small">Manage great experiences</h4>
+          <p>Problems happen and when they do, we have you covered. You can monitor every device you have live in real time through our scalable <strong>Management Console</strong> or integrate that management capability into your support systems API. In either case, you can perform functions such as deactivation, reset, configuration, retirement, archival, and more.</p>
+        </div>
+        <div class="howitworks-scale-graphic six pull-six columns">
+          <img src="/assets/howitworks/truck_management_console.jpg" id="product" />
+          <p><strong>Manage devices actively and ensure great customer experiences.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="howitworks-closer row">
+    <div class="columns nine centered text-center">
+      <!--
+      <div class="after"></div> -->
+      <h3 class="heading-small font-light">By focusing on innovating, perfecting and deploying connected products and compelling experiences rather than on building and maintaining infrastructure, you can bring your IoT vision to the world faster and at a lower cost.</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="content-section get-started-big columns nine centered">
+      <div class="contain">
+        <a href="/get_started/" class="button large orange get-started">Get Started <i class="button-icon icon-arrow-right"></i></a>
+        <p class="get-started-links"><span>Take the <a href="/testdrive/">Test Drive</a></span> or explore our <a href="/showcase/">Showcase</a></p></p>
+      </div>
+    </div>
+    </div>
+  </row>
+
+
+</section>
+
+
+      </div>
+    </section>
+
+    <footer class="app-footer" role="contentinfo">
+  <div class="app-footer-inner row">
+    <section class="app-footer-links eight columns">
+    <ul class="block-grid four-up mobile-two-up">
+      <li class="footer-section">
+      <h3 class="footer-section-title">About Us</h3>
+      <ul class="no-bullet">
+        <li class="footer-accent-links"><a href="/login/">Login</a> / <a href="/get_started/">Get Started</a></li>
+        <li><a href="/whats_xively/">Platform</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/partners/">Partners</a></li>
+        <li><a href="/company_info/">Company info</a></li>
+        <li><a href="/jobs/">Jobs</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Support</h3>
+      <ul class="no-bullet">
+        <li><a href="/dev/docs/api/">API Documentation</a></li>
+        <li><a href="/dev/libraries/">Libraries</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/dev/help/">Help</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Learn</h3>
+      <ul class="no-bullet">
+        <li><a href="/showcase/">Showcase</a></li>
+        <li><a href="http://blog.xively.com">Blog</a></li>
+        <li><a href="/dev/tutorials/">Tutorials</a></li>
+        <li><a href="/dev/hardware/">Hardware</a></li>
+      </ul>
+      </li>
+
+      <li class="footer-section">
+      <h3 class="footer-section-title">Media</h3>
+      <ul class="no-bullet">
+        <li><a href="/news/">News</a></li>
+        <li><a href="/press_releases/">Press Releases</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/awards/">Awards</a></li>
+        <li class="footer-social-icons">
+        <a href="https://www.facebook.com/Xively" class="facebook"><i class="icon-facebook"></i></a>
+        <a href="http://twitter.com/XivelyIOT" target="_blank" class="twitter"><i class="icon-twitter"></i></a>
+        <a href="https://plus.google.com/u/0/107384947738095536561" class="google-plus"><i class="icon-google-plus"></i></a>
+        </li>
+      </ul>
+      </li>
+    </ul>
+    </section>
+
+    <section class="app-footer-copyright four columns">
+    <h1 class="footer-logo">
+      <a href="/">Xively</a>
+    </h1>
+    <p class="footer-company">Copyright &copy; 2003-2013 LogMeIn, Inc. <br>All rights reserved.</p>
+    <p class="footer-terms"><a href="https://secure.logmein.com/policies/privacy.aspx">Legal Info</a></p>
+    <a class="footer-contact" href="/contact_us/">Contact Us <i class="button-icon icon-arrow-right"></i></a>
+    </section>
+  </div>
+</footer>
+
+
+  </div>
+
+  <script type="text/javascript" src="/assets/app.js"></script>
+  <script type="text/javascript">
+  window._gaq = [['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],['_setAccount','UA-20796726-3'],['_trackPageview'],['_trackPageLoadTime'], ['_setDomainName', 'xively.com'],['_setAllowHash', false]];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'
+  });
+</script>
+
+</body>
+</html>
