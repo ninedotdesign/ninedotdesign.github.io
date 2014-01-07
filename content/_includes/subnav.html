@@ -1,0 +1,67 @@
+{% if page.section == 'home' or page.section == 'newsevents' or page.section == 'services' or page.section == 'dev' or page.section == 'platform' or page.section == 'showcase' or page.section == 'ecosystem' or page.section == 'ecosystem'%}
+<nav class="subnav-bar">
+  <div class="contain">
+    <ul class="nav-bar clearfix">
+      {% if page.section == 'home' %}
+      <div class="home-news">
+        <div class="contain clearfix">
+          <h3 class="home-news-heading"><a class="link-light" href="/news/">News</a></h3>
+          <p class="home-news-story"><a class="link-light" href="http://blog.xively.com/2013/12/04/logmeins-xively-earns-best-in-show-award-for-iot-solution-at-arm-techcon-2013/">LogMeIn’s Xively Earns Best in Show Award for IoT Solution at ARM...<i class="button-icon icon-arrow-right"></i></a></p>
+        </div>
+      </div>
+      {% endif %}
+
+
+      {% if page.section == 'platform' %} <li{% if page.active == 'whats_xively' %} class="active"{% endif %}><a href="/whats_xively/">What is Xively?</a>
+      </li>
+      <li{% if page.active == 'using_xively' %} class="active"{% endif %}><a href="/using_xively/">How it Works</a>
+      </li>
+      <li{% if page.active == 'testdrive' %} class="active"{% endif %}><a href="/testdrive/">Test Drive</a>
+      </li>
+      <li{% if page.active == 'pricing' %} class="active"{% endif %}><a href="/pricing/">Pricing</a>
+      </li>
+      <li{% if page.active == 'get_started' %} class="active"{% endif %}><a href="/get_started/">Get Started</a>
+      </li>
+      {% elsif page.section == 'dev' %} <li{% if page.active == 'tutorials' %} class="active"{% endif %}><a href="/dev/tutorials/">Tutorials</a>
+      </li>
+      <li{% if page.active == 'libraries' %} class="active"{% endif %}><a href="/dev/libraries/">Libraries</a>
+      </li>
+      <li{% if page.active == 'hardware' %} class="active"{% endif %}><a href="/dev/hardware/">Hardware</a>
+      </li>
+      <li{% if page.active == 'api' %} class="active"{% endif %}><a href="/dev/docs/api/">API Docs</a>
+      </li>
+      <li{% if page.active == 'help' %} class="active"{% endif %}><a href="/dev/help/">Help</a>
+      </li>
+      {% elsif page.section == 'ecosystem' %} <li{% if page.active == 'showcase' %} class="active"{% endif %}><a href="/showcase/">Customers</a>
+      </li>
+      <li{% if page.active == 'gallery' %} class="active"{% endif %}><a href="/partners/">Partner Gallery</a>
+      </li>
+      <li{% if page.active == 'join' %} class="active"{% endif %}><a href="/partners/join/">Join the Network</a>
+      </li>
+      {% elsif page.section == 'newsevents' %} <li{% if page.active == 'news' %} class="active"{% endif %}><a href="/news/">In the News</a>
+      </li>
+      <li{% if page.active == 'press_releases' %} class="active"{% endif %}><a href="/press_releases/">Press Releases</a>
+      </li>
+      <li{% if page.active == 'events' %} class="active"{% endif %}><a href="/events/">Events</a>
+      </li>
+      <li{% if page.active == 'awards' %} class="active"{% endif %}><a href="/awards/">Awards</a>
+      </li>
+      {% endif %}
+      <div class="social"> <a href="{{ site.globals.blog_url }}" class="bloglink">BLOG</a>
+        <div class="social-box"></div>
+        <div class="clearfix"></div>
+      </div>
+    </ul>
+  </div>
+</nav>
+<div class="social-drawer">
+  <div> <a href="https://plus.google.com/+xively" target="_blank" class="btng"><img src="{% asset_path gplus.png %}" alt="Google+" /></a>
+    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FXively&amp;width=170&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=false&amp;appId=263181137044005" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+    <iframe allowtransparency="true" frameborder="0" scrolling="no" data-show-screen-name="false"
+src="//platform.twitter.com/widgets/follow_button.html?screen_name=XivelyIOT"
+style="width:210px; height:20px; margin-left:20px;" class="twitbox"></iframe>
+    <a class="email" href="mailto:?subject=Xively&body={{ site.globals.website_url }}"><img src="{% asset_path mail.png %}" alt="email us" /></a> </div>
+  <!-- social drawer -->
+  <div class="clearfix"></div>
+</div>
+{% endif %}

@@ -1,0 +1,19 @@
+<div class="search-bar">
+  <div class="search-bar-inner">
+		<div class="search-bar-right">
+			<a class="search-bar-login" href="/login/">Login</a>
+			<form class="module-search-form" action="/search" method="get">
+			    <input id="header-search" class="module-search-input" type="text" name="q" placeholder="Search Xively.com">
+			    <button type="submit" for="header-search" class="module-search-label icon-search" ></button>
+			</form>
+		</div>
+  </div>
+</div>
+
+<header class="app-header contain-to-grid" role="banner">
+  <!--# block name="logged_out_header" -->
+    {% include logged_out_header.html %}
+  <!--# endblock -->
+  <!--# include virtual="/dynamic_partials/header?page_type={{ page.section }}&subsection={{ page.active }}" stub="logged_out_header" -->
+  {% include subnav.html %}
+</header>

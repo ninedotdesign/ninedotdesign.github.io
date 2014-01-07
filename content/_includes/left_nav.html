@@ -1,0 +1,54 @@
+<ul class="left">
+
+
+
+  <li class="app-header-platform {% if page.section == 'platform' %}active{% endif %} has-dropdown">
+    <a href="/whats_xively/">Platform</a>
+    <ul class="dropdown">
+      <li{% if page.active == 'whats_xively' %} class="active"{% endif %}><a href="/whats_xively/">What is Xively?</a></li>
+      <li{% if page.active == 'using_xively' %} class="active"{% endif %}><a href="/using_xively/">How it Works</a></li>
+      <li{% if page.active == 'platform' %} class="active"{% endif %}><a href="/testdrive/">Test Drive</a></li>
+      <li{% if page.active == 'pricing' %} class="active"{% endif %}><a href="/pricing/">Pricing</a></li>
+      <li{% if page.active == 'get_started' %} class="active"{% endif %}><a href="/get_started/">Get Started</a></li>
+    </ul>
+  </li>
+
+  {% if page.active == 'consulting' %}
+  <li class="app-header-consulting active">
+  {% else %}
+  <li class="app-header-consulting">
+  {% endif %}
+    <a href="/consulting/">Services</a>
+  </li>
+
+  <li class="app-header-ecosystem {% if page.section == 'ecosystem' %}active{% endif %} has-dropdown">
+    <a href="/showcase/">Ecosystem</a>
+    <ul class="dropdown">
+      <li{% if page.active == 'showcase' %} class="active"{% endif %}><a href="/showcase/">Customers</a></li>
+      <li{% if page.active == 'gallery' %} class="active"{% endif %}><a href="/partners/">Partner Gallery</a></li>
+      <li{% if page.active == 'join' %} class="active"{% endif %}><a href="/partners/join/">Join the Network</a></li>
+    </ul>
+  </li>
+  <li class="app-header-newsevents {% if page.section == 'newsevents' %}active{% endif %} has-dropdown">
+    <a href="/news/">News & Events</a>
+    <ul class="dropdown">
+      <li{% if page.active == 'news' %} class="active"{% endif %}><a href="/news/">In the News</a></li>
+      <li{% if page.active == 'press_releases' %} class="active"{% endif %}><a href="/press_releases/">Press Releases</a></li>
+      <li{% if page.active == 'events' %} class="active"{% endif %}><a href="/events/">Events</a></li>
+      <li{% if page.active == 'awards' %} class="active"{% endif %}><a href="/awards/">Awards</a></li>
+    </ul>
+  </li>
+	<li class="has-dropdown {% if page.section == 'dev' %}active subnav-active{% endif %}">
+	  <a href="/dev/">Dev Center</a>
+	  <ul class="dropdown">
+	    <li{% if page.active == 'tutorials' %} class="active"{% endif %}><a href="/dev/tutorials/">Tutorials</a></li>
+	    <li{% if page.active == 'libraries' %} class="active"{% endif %}><a href="/dev/libraries/">Libraries</a></li>
+	    <li{% if page.active == 'hardware' %} class="active"{% endif %}><a href="/dev/hardware/">Hardware</a></li>
+	    <li{% if page.active == 'api' %} class="active"{% endif %}><a href="/dev/docs/api/">API Docs</a></li>
+	    <li{% if page.active == 'help' %} class="active"{% endif %}><a href="/dev/help/">Help</a></li>
+	  </ul>
+	</li>
+
+
+
+</ul>

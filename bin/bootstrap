@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+apps_link=/u/apps/sloth/current
+
+if [ ! -L $apps_link ]
+then
+  set -x
+  sudo ln -sf $HOME/work/sloth $apps_link
+fi
+
+bundle install
+bundle exec compass compile assets
+bundle exec jekyll build
+

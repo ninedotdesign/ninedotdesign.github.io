@@ -1,0 +1,98 @@
+.hero.jobs-hero{
+  min-height: em(400px);
+  margin-bottom: em(50px);
+  background: $grayLightest url("https://d1ita7utfg6pwh.cloudfront.net/assets/hero-bg-4.jpg") repeat center -101px;
+
+  .hero-content {
+    min-height: em(400px);
+    background-color: $mainColor;
+    background-color: rgba($mainColor,.85);
+  }
+  
+	h1{
+	    color: $white;	
+      background-color: $black;
+      background-color: rgba($black,.50);
+      padding: em(5px);
+      font-size: em(50px);
+      margin-top: em(160px,50px);
+    }
+
+  @media (max-width: 767px) {
+    min-height: em(300px);
+
+    .hero-content {
+      min-height: em(300px);      
+    }
+
+    h1 {
+      margin-top: em(100px,50px);
+    }
+  }
+
+  @media (max-width: 547px) {
+    min-height: em(200px);
+    margin-bottom: em(30px);
+
+    .hero-content {
+      min-height: em(200px);      
+    }
+
+    h1 {
+      @include font-size(32px);
+      margin-top: em(70px,32px);
+    }
+  }
+}
+.content-section-jobs{
+	p,ul li{
+		@extend .body-font;
+	}
+
+	section.row{
+		margin-bottom: em(40px);
+	}
+	h3 a{
+	  font-size: em(12px);
+	}
+	.address{
+	  .london-office{
+	    background: #dee0e0 url(https://d2npiipx5ecxt9.cloudfront.net/assets/team-office-map-d385748a6418972395c9ee03778c66da.png) no-repeat center center;
+	  }	  
+    .icon{
+      font-size: em(20px);
+      margin-right: em(10px);
+    }
+	  
+	  h4{
+	    font-size: em(18px);
+	    color: $grayText;
+	  }
+	}
+}
+
+.content-section-jobs section.jobs-applications {
+  margin-bottom: 0;
+
+  .six {
+    margin-bottom: em(30px);
+  }
+
+  .heading-medium {
+    margin-top: 30px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.jobs-area {
+  @media (min-width: 768px) {
+    margin: 1em 0;
+  }
+}
+
+.jobs-mosaic-img {
+  margin-top: em(20px);
+}

@@ -1,0 +1,51 @@
+---
+layout: default
+section: ecosystem
+active: gallery
+name: Partner Gallery
+---
+<section class="row header-section-howitworks">
+  <div class="columns twelve partnernetwork">
+    <h1 class="key-message partner-gallery-title text-center">The Xively Partner Network (XPN) ™</h1>
+    <div class="row">
+      <div class="six columns">
+        <h2 class="hero-tagline-small partners">A vibrant, global ecosystem of companies that enable the creation and enhancement of connected products and solutions through Xively enabled components, software, and services.</h2>
+      </div>
+      <div class="columns one"> </div>
+      <div class="five columns"> <a href="#" class="hero-video partners-video-1 link-light" data-reveal-id="modal-video" data-animation="fade"> <img src="{% asset_path partner_pages/partner_vid_thumbnail.jpg %}" alt="Video screenshot"> <i class="icon-play-2 xpn-icon-play"></i> <span class="hero-video-caption"></span> </a> </div>
+    </div>
+  </div>
+</section>
+<section class="dev-center page-hardware">
+  <div class="row">
+    <div class="columns twelve">
+      <h3 class="heading-medium font-light">Partner Directory</h3>
+    </div>
+    <div class="columns twelve">
+      <h4 class="hero-tagline-small partners">Browse the member directory for partners that are ready to help you.</h4>
+    </div>
+    <div class="twelve columns" id=""> {% for tutorial in site.categories.partners reversed %}
+      <section class="row board gallery-entry">
+        <div class="two columns mobile-one"> <a href="{{ tutorial.url }}"> <img class="partner-gallery-logo" src="{{ tutorial.image | asset_path }}" alt="{{ tutorial.title }}"> </a> </div>
+        <div class="six columns mobile-three board">
+          <h5 class="partners-gallery-companyname">{{ tutorial.name }}</h5>
+          <p class="partners-gallery-taglist"> {% for tag in tutorial.tags %} <strong>{{ tag }}</strong>{% unless forloop.last %}, {% endunless %}
+            {% endfor %} </p>
+          <p class="partners-gallery-description"> {{ tutorial.description }} </p>
+        </div>
+        <div class="four columns mobile-four"> <a class="button medium ie9 partner-fullstory-button" href="{{ tutorial.url }}">Read the full story<i class="button-icon icon-arrow-right"></i></a> </div>
+      </section>
+      {% endfor %} </div>
+  </div>
+</section>
+<div class="row">
+  <h4 class="heading-small font-light text-center"> Meaningful opportunities, shared success. </h4>
+  <div class="twelve columns centered text-center join-button" > <a href="/get_started/partner_inquiries/" style="margin-top: 10px" class="button medium blue hero-get-started">Join the Network<i class="button-icon icon-arrow-right"></i></a> </div>
+</div>
+
+<!-- modal for video -->
+<div id="modal-video" class="modal-video reveal-modal xlarge">
+  <div class="flex-video widescreen vimeo">
+    <iframe width="960" height="720" src="//www.youtube.com/embed/tHmenqfioG0?modestbranding=1&fs=0&rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a> </div>

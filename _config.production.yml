@@ -1,0 +1,33 @@
+markdown: kramdown
+pygments: false
+source: content
+plugins: plugins
+permalink: /:categories/:title/
+
+globals:
+  twitter_url: http://twitter.com/XivelyIOT
+  status_url: http://status.xively.com
+  gplus_url: https://plus.google.com/u/0/107384947738095536561
+  facebook_url: https://www.facebook.com/Xively
+  blog_url: http://blog.xively.com
+  website_url: https://xively.com
+  support_email: support@xively.com
+
+sass:
+  syntax: scss        # scss|sass
+  style:  compressed  # nested|expanded|compact|compressed
+
+# Plugin: jekyll-assets
+assets:
+  dirname: assets
+  baseurl: https://d15n4q3o4x3svq.cloudfront.net/assets/
+  sources:
+    - images
+    - javascripts
+    - stylesheets
+    - fonts
+  compress:
+    js:   'uglifier'
+    css:  'sass'
+  cachebust: hard
+  gzip: [ text/css, application/javascript ]

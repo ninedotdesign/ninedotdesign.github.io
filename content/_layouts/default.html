@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 ielt10 ielt9 ielt8 ielt7 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 ielt10 ielt9 ielt8 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ielt10 ielt9 lt-ie9 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ielt10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js iegt9" lang="en"> <!--<![endif]-->
+
+<head>
+  <script src="//cdn.optimizely.com/js/255025209.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#0085cf">
+  <meta name="application-name" content="Xively">
+  <meta name="description" content="Xively brings meaning to the Internet of Things through cloud based services that simplify and accelerate the creation, deployment, scaling and management of compelling products and solutions.">
+  <meta name="keywords" content="IoT, Internet of Things, cloud, public cloud, smart systems, IoTWorks, iobridge, cisco, devices, iOS, Apple, Microsoft, paas, platform as a service, open, arm, mbed, ti, raspberry pi, arduino">
+
+  <title>{{ page.name }}{% unless page.name_noappendix %} - Xively{% endunless %}</title>
+
+  {% stylesheet app.css %}
+
+  <!--[if gt IE 8]><!-->
+  <script type="text/javascript" src="//use.typekit.net/cwq5rkg.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!--<![endif]-->
+
+  <!--[if lt IE 9]> 
+  <script type="text/javascript" src="//use.typekit.net/ruq4lqv.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  {% javascript cosmui/ui.respond.js %}
+  <![endif]-->
+
+  {% javascript zurbfoundation/modernizr.foundation.js %}
+
+</head>
+<body>
+  <div class="container{% if page.narrow %} narrow{% endif %}">
+
+    {% include header.html %}
+
+    <section class="app-main" role="main">
+      <div class="app-main-inner">
+
+        {{ content }}
+
+      </div>
+    </section>
+
+    {% include footer.html %}
+
+  </div>
+
+  {% javascript app.js %}
+  {% include analytics.html %}
+</body>
+</html>

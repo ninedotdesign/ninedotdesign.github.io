@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "https://$(hostname --fqdn 2>&1)" && \
+
+CONFIG=''
+[ "$ENV" == "production" ] && CONFIG='--config _config.production.yml'
+
+bundle exec compass compile assets --css-dir ../content/stylesheets
+bundle exec jekyll build $CONFIG

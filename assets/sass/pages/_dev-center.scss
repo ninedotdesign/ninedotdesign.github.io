@@ -1,0 +1,337 @@
+.dev-center-landing {
+
+  p {
+    line-height: em(18px);
+  }
+
+  .dev-header {
+    padding: 15px 0;
+    margin-bottom: 20px;
+    background: $grayLightest;
+
+    .hero-tagline-small {
+      margin-bottom: 14px !important;
+    }
+  }
+
+  .dev-section {
+    margin-bottom: 20px;
+  }
+
+  .dev-section-heading {
+    a {
+      @include font-size(16px);
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .spacer {
+      margin-right: 14px;
+    }
+  }
+
+  .dev-section-subheading,
+  p {
+    max-width: 570px;
+  }
+
+  .dev-section-subheading {
+    @include font-size(16px);
+    line-height: em(20px,16px);
+  }
+
+  .dev-tutorials {
+    .tutorials-item {
+      padding-bottom: 20px;
+    }
+  }
+
+  .dev-hardware {
+    .row {
+      margin-top: 20px;
+    }
+  }
+
+  .dev-hardware-aid {
+    margin: 14px 0;
+    color: $txtColor;
+    @include font-size(16px);
+    line-height: em(20px,16px);
+  }
+
+  @media (max-width: 767px) {
+    .dev-hardware {
+      .three:first-child {
+        float: left;
+        width: 42% !important;
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .dev-tutorials,
+    .dev-partners {
+      .block-grid > li {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media (min-width: em(560px,16px)) {
+    .dev-header {
+      padding: 25px 0;
+      margin-bottom: 30px;
+    }
+
+    .dev-section {
+      margin-bottom: 30px;
+
+      .heading-medium {
+        @include font-size(30px);
+        line-height: em(34px,30px); 
+        padding-bottom: 10px;
+        margin-bottom: 14px;
+        border-bottom: 1px solid darken($grayLightest,10);       
+      }
+    }
+  }
+
+  @media (min-width: em(768px,16px)) {
+    .dev-header {
+      padding: 40px 0;
+      margin-bottom: 40px;
+    }
+
+    .dev-section {
+      margin-bottom: 50px;
+    }
+  }
+
+}
+
+section.dev-center{
+
+  .button{
+    margin-bottom: em(15px);
+  }
+  section.row{
+    margin-bottom: em(30px);
+  }
+  .teaser{
+    img{
+      margin-bottom: em(10px);
+    }
+  }
+  
+  .block-grid li{
+    margin: 0 em(10px);
+  }  
+  @media (min-width: em(767px)){
+    .block-grid li{
+      padding: 0 em(20px) 0 0;
+      margin: 0;
+    }      
+  }
+  h2 span.link{
+    font-size: em(6px);
+  }
+  
+  .maintenance{
+    margin-top: em(20px);
+    span.maintenance-date{
+      color: $orangeColor;
+    }    
+  }
+  .specs p{
+    margin-bottom: em(3px);
+  }
+  .dev-section-heading {
+    @include font-size(30px);
+    line-height: em(34px,30px); 
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid darken($grayLightest,10);       
+  }
+  
+  
+  /***** hardware Page*******/  
+  .platform-logo{
+    margin-top: em(50px);
+    li{
+      min-height: em(80px);
+      line-height: em(94px);
+      img,h2{
+        vertical-align: middle;        
+        display: inline-block;        
+      }
+
+    }
+  }
+
+  #tested-solutions-list{
+    margin-bottom: em(50px);
+    ul li{
+      float: left;
+    }
+    .key-features{
+      display: none;
+      border-bottom: 1px solid $gray;          
+      border-top: 1px solid $gray;                
+    }
+    #search-solutions{
+      position: relative;
+      clear: both;
+      input{
+        line-height: em(30px);
+        margin: 0 0 em(20px) 0;
+        padding-left: em(30px);
+        font-size: em(16px);
+        @extend .font-light;
+        height: em(35px);
+      }
+      .search-icon{
+        position: absolute;
+        top: em(10px);
+        left: em(20px);
+      }
+      @media (min-width: em(767px)){
+        .search-icon{
+          position: absolute;
+          top: em(10px);
+          left: em(10px);
+        }
+      }
+
+    }
+    .sort-by{
+      background: $gray-bkg;
+      overflow: hidden;
+      h4{
+        color: $grayText;
+      }
+      .icon{
+        color: $black;
+      }
+    }
+    h4{
+      font-size: em(16px);
+      margin: em(6px) 0;
+    }
+    .board{
+      font-weight: 700;
+    }
+    h4 .triangle-top{
+      @include cssTriangle(5px, $gray, left);    
+      float: left;
+      margin: em(4px) em(3px) em(4px) em(4px);
+      }    
+    h4 .triangle-right{
+      @include cssTriangle(5px, $gray, top);    
+      float: left;
+      margin: em(4px) em(3px) em(4px) em(4px);
+      }    
+    @media (min-width: em(767px)){
+      h4{
+        font-size: em(16px);       
+        .triangle-top{        
+          margin: em(5px) em(5px) 0 0;          
+        }
+        .triangle-right{
+          margin: em(4px) em(5px) 0 0;          
+        }
+      }            
+    }
+    .hardware-showing{
+      clear: both;
+    }
+    .filter{
+      margin: em(5px) 0 0 0;
+      padding: 0;
+      dd{
+        margin: 0 em(10px) 0 0;
+        padding: em(10px);
+      }
+    }
+    @media (min-width: em(767px)){
+      .filter{
+        margin: em(5px) 0 0 em(20px);
+        padding: 0 em(15px);
+      }
+    }    
+    .list{
+      overflow: hidden;
+      border-bottom: 1px solid #a5aeb6;      
+      .block-grid{
+        margin: 0; 
+     
+        li{
+          border: none;
+          padding: 0;
+          margin:0;
+          &:last-child{
+           border-right: none 
+          }         
+        }
+      }
+      @media (min-width: em(768px)){
+        .block-grid{
+          li{
+            border-right: 1px solid $gray;            
+            padding: 0 em(10px);            
+            &.three-lines{
+              height: em(80px);
+            }
+            &.four-lines{
+              height: em(97px);
+            }          
+          }
+        }
+        
+                
+      }
+      
+      li{
+        border: 1px solid $gray;      
+        margin-bottom: 0;
+        border-bottom: none;
+        p{
+          margin: 0;
+          span{
+            color: $black;
+          }
+        }
+        .category{
+          display: none;
+        }
+      }
+    }
+  }  
+  
+  .example-hardware{
+    padding: em(10px);
+    background: $gray-bkg;
+    margin-top: em(70px);
+  }
+  
+  ul.partners{
+    margin-top: em(30px);
+    li{
+      margin: 0 0 em(20px) 0;
+      p{
+        margin-bottom: 0;
+      }
+    }
+
+  }
+    
+}
+section.dev-center.library{
+  h2{
+    margin-top: 0;
+  }  
+
+}
+/***** hardwre Page*******/

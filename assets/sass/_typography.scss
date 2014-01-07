@@ -1,0 +1,194 @@
+/* font color for the text*/
+p,ul li{
+  color: $grayText;	
+}
+.body-font{
+	font-size: em(18px);
+  line-height: em(20px,16px);
+  letter-spacing: -.018em;	
+}
+.font-light{
+  font-weight: 300;
+}
+.font-blue{
+  color: $mainColor;
+}
+
+ul li{
+  list-style: none;
+}
+label {
+  cursor: default;
+}
+/* BRAND HEADINGS */
+.heading-big {
+  @include font-size(36px);
+  line-height: em(40px,36px);
+  font-weight: 300;
+  letter-spacing: -.044em;
+
+  @media (min-width: em(560px,16px)) {
+    @include font-size(44px);
+    line-height: em(48px,44px);
+  }
+}
+
+.content-heading{
+  @include font-size(36px);
+  line-height: em(40px,36px);
+  font-weight: 300;
+  letter-spacing: -.044em;
+
+  @media (min-width: em(560px,16px)) {
+    @include font-size(44px);
+    line-height: em(48px,44px);
+  }
+}
+
+.heading-medium {
+  @include font-size(30px);
+  line-height: em(34px,30px);
+  letter-spacing: -.036em;
+
+  @media (min-width: em(560px,16px)) {
+    @include font-size(36px);
+    line-height: em(40px,36px);
+  }
+}
+
+.heading-small {
+  @include font-size(18px);
+  line-height: em(22px,18px);
+  letter-spacing: -.024em;
+
+  @media (min-width: em(560px,16px)) {
+    @include font-size(24px);
+    line-height: em(28px,24px);
+  }
+}
+.heading-smallest{
+  @include font-size(16px);
+  line-height: em(14px,16px);
+  letter-spacing: -.024em;
+	margin: 0;
+
+  @media (min-width: em(560px,16px)) {
+    @include font-size(16px);
+    line-height: em(14px,16px);
+  }
+	
+}
+.heading-caps {
+  @include font-size(18px);
+  line-height: em(22px,18px);
+  letter-spacing: .06em;
+
+  @media (min-width: em(560px,16px)) {
+    @include font-size(24px);
+    line-height: em(28px,24px);
+  }
+}
+.subheading,
+.content-subheading{
+  margin-top: em(10px,24px);
+  @include font-size(30px);
+  line-height: em(35px,30px);
+  color: $black;
+  font-weight: normal;
+  letter-spacing: -.05em;
+}
+
+.key-message{
+	font-size: em(36px);
+	padding: em(30px,36px) 0 0 0;
+	font-weight: 300;
+	letter-spacing: -.044em;
+
+  @media (min-width: $topBarBreakPoint) {
+    padding: em(40px,36px) 0 0 0;
+  }
+
+  @media (max-width: em(620px,16px)) {
+    @include font-size(30px);
+    line-height: em(34px,30px);
+  }
+}
+.hero-tagline-big {
+  margin-top: em(40px,36px);
+  margin-bottom: em(10px,36px);
+  @include font-size(36px);
+  line-height: em(40px,36px);
+  color: $txtColor;
+  letter-spacing: -.05em;
+
+  @media (min-width: em(768px,16px)) {
+	  margin-bottom: em(10px,48px);
+    @include font-size(48px);
+    line-height: em(52px,48px);
+  }
+}	
+.hero-tagline-small{
+  margin-top: em(10px,24px);
+  margin-bottom: em(50px,24px);
+  @include font-size(24px);
+  line-height: em(28px,24px);
+  color: darken($gray,10);
+  font-weight: 300;
+  letter-spacing: -.05em;
+
+  @media (min-width: em(768px,16px)) {
+    margin-bottom: em(60px,24px);
+  }
+
+  @media (max-width: em(620px,16px)) {
+    margin-bottom: em(30px,20px) !important;
+    @include font-size(20px);
+    line-height: em(24px,20px);
+  }
+}
+
+blockquote{ 
+	font-size: em(27px);
+	line-height: em(32px,25px);
+	color:$mainColor;
+	font-style: italic;
+	border-left: 0;
+	}
+blockquote p{
+	color: $grayText;	
+	font-style: normal;
+}
+
+.accessory-lead,
+.accessory-lead-link {
+  @include font-size(16px);
+  line-height: em(20px,16px);
+  letter-spacing: -.018em;
+
+  @media (min-width: em(560px,16px)) {
+    @include font-size(18px);
+    line-height: em(24px,18px);
+  }
+}
+
+.accessory-lead {
+  color: $grayText;
+}
+
+.feature.feature-2 .accessory-lead, .feature.feature-2 h3, .feature.feature-4 .accessory-lead, .feature.feature-4 h3 {
+  color: $mainColor;
+}
+
+.feature.feature-1 h3, .feature.feature-1 .accessory-lead, .feature.feature-3 h3, .feature.feature-3 .accessory-lead {
+  color: $white;
+}
+
+
+form.form-big .form-field {
+    padding: em(14px);
+}
+
+
+.form-actions.form-actions-big{
+	padding: 8px;
+}

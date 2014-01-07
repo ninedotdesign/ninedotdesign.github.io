@@ -1,0 +1,19 @@
+/* Pages:  vision page*/
+
+.vision-hero{
+  background: $mainColor url("https://d1ita7utfg6pwh.cloudfront.net/assets/Newark.jpg") repeat -40px -145px;
+	min-height: em(400px);
+	h1{
+		color: $orangeDarkColor;
+	}
+}
+.content-section-vision{
+	p,ul li{
+		@extend .body-font;
+	}
+
+	section.row{
+		margin-bottom: em(50px);
+	}
+}
+
